@@ -45,6 +45,10 @@ img {
     display: block;
 }
 
+svg path {
+    pointer-events: none;
+}
+
 .main-content h2 {
     text-align: center;
     margin-top: 5rem;
@@ -86,6 +90,138 @@ img {
     padding: 20px 0;
     display: flex;
     justify-content: space-between;
+}
+
+/* Carrito de compras */
+
+.cart {
+    display: inline-block;
+    height: fit-content;
+    position: absolute;
+    right: 5vw;
+    top: 8rem;
+}
+
+.cart__button {
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: #e1e1e1;
+    color: #000000
+}
+
+.cart__button:hover {
+    background-color: #d1d1d1;
+}
+
+.cart__button-active {
+    color: #037bc0;
+}
+
+.cart__content-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    right: 0;
+    top: 100%;
+    margin-top: 5px;
+    min-width: 480px;
+    min-height: 500px;
+    padding: 1rem;
+    background-color: #e1e1e1;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.table-container {
+    overflow-y: scroll;
+    height: 500px;
+}
+
+.cart-list {
+    width: 100%;
+}
+
+.cart-list,
+th,
+tr {
+    border-bottom: 1px solid #037bc0;
+    border-collapse: collapse;
+}
+
+.cart-list th {
+    color: #037bc0;
+}
+
+.cart-list th,
+.cart-list td {
+    padding: 1rem .3rem;
+}
+
+.cart-list tbody tr {
+    background-color: white;
+    margin-bottom: 1rem;
+}
+
+.cart-list tbody td {
+    text-align: center;
+    width: calc(100%/4);
+}
+
+.cart__delete-button {
+    display: flex;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    color: #037bc0;
+}
+
+.cart__delete-button:hover {
+    color: #0591e2;
+    cursor: pointer;
+}
+
+.cart__delete-button:active {
+    color: #00629b;
+}
+
+.cart__empty-button {
+    height: 3.5rem;
+    width: calc(100% - 2rem);
+    border: none;
+    border-radius: 5px;
+    background-color: #037bc0;
+    color: #fff;
+    font-weight: 700;
+}
+
+.cart__empty-button:hover {
+    background-color: #0591e2;
+    cursor: pointer;
+}
+
+.cart__empty-button:active {
+    background-color: #00629b;
+}
+
+.nothing-here {
+    display: flex;
+    height: 500px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.nothing-here p{
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: .2rem;
+    color: #363636;
 }
 
 .hero {
@@ -382,3 +518,12 @@ footer {
     border: none;
 }
 
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
