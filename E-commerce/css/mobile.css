@@ -11,6 +11,31 @@
         font-size: 2.4rem;
     }
 
+    .site-name {
+        margin-bottom: 0;
+    }
+
+    /* Cart */
+    
+    .cart {
+        display: block;
+        position: relative;
+        right: unset;
+        top: unset;
+        margin-inline: auto;
+        margin-bottom: 2rem;
+        width: fit-content;
+    }
+
+    .cart__content-container {
+        right: -300%;
+        min-width: 350px;
+    }
+
+    .cart-list tbody td {
+        font-size: 1.2rem;
+    }
+
     .main-nav {
         flex-direction: column;
         align-items: center;
