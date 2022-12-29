@@ -54,8 +54,8 @@ function getItem(evt) {
       ammount: 1
     }
     
-    let repeated = products.some(element => element.id === productContent.id);
-    if(repeated) {
+    // Check if repeated
+    if(products.some(element => element.id === productContent.id)) {
       products.forEach(productObj => {
         if(productObj.id === productContent.id) {
           productObj.ammount++

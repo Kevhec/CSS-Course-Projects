@@ -1,0 +1,144 @@
+@media (max-width: 48em) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3.2rem;
+    }
+
+    h3 {
+        font-size: 2.4rem;
+    }
+
+    .main-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        height: 25rem;
+    }
+
+    /* Bloque categorías */
+    .category-listing {
+        grid-template-columns: auto;
+    }
+
+    .category {
+        margin-bottom: 2rem;
+    }
+
+    .category img {
+        width: 100%;
+        max-height: 25rem;
+        object-fit: cover;
+    }
+
+    /* Bloque nosotros */
+    .about-us {
+        background-image: linear-gradient(to bottom, transparent 50%, #037bc0 50%, #037bc0 100%), url(../pictures/nosotros.jpg);
+        background-size: 100%, 90rem;
+        background-position: top left;
+        padding: 0;
+    }
+
+    .about-us-container {
+        grid-template-columns: unset;
+        grid-template-rows: repeat(2, 1fr);
+        gap: unset;
+    }
+
+    .about-us-text {
+        grid-column: auto;
+        grid-row: 2 / 3;
+        text-align: center;
+        padding: 4rem;
+    }
+
+    /* bloque productos */
+    .products-list {
+        display: block;
+    }
+
+    .product:not(:last-of-type) {
+        margin-bottom: 2rem;
+    }
+
+    .product:first-child {
+        display: block;
+    }
+
+    .product:first-child img {
+        height: 30rem;
+    }
+
+    /* footer */
+    footer {
+        padding-top: 2.2rem;
+    }
+
+    .footer-container {
+        display: block;
+    }
+
+    .footer-container > div {
+        text-align: center;
+    }
+
+    .footer-container div:not(:last-of-type) {
+        margin-bottom: 2rem;
+    }
+
+    /* Nosotros - página */
+    .about-us-info {
+        padding: 0 2rem;
+    }
+
+    /* Blog - página principal */
+    .blog-main {
+        display: block;
+    }
+
+    .blog-entry h2 {
+        text-align: center;
+    }
+
+    .post-meta {
+        flex-direction: column;
+        justify-content: unset;
+    }
+
+    .post .button {
+        max-width: unset;
+    }
+
+    aside {
+        padding-left: 2rem;
+    }
+
+    /* Entrada */
+    .post-entry {
+        width: auto;
+    }
+
+    article.blog-entry {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    /* Galería */
+    .gallery-container {
+        display: block;
+    }
+
+    .gallery-container figure:not(:last-of-type) {
+        margin-bottom: 2rem;
+    }
+
+    /* Contact */
+    .form-button {
+        width: calc(100% - 1rem);
+        margin-inline: auto;
+    }
+}

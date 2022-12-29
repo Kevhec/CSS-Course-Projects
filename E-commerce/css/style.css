@@ -234,8 +234,7 @@ tr {
 
 /* Categorías */
 .categories {
-    padding-top: 5rem;
-    margin-bottom: 5rem;
+    padding: 5rem 0;
 }
 
 .categories h2 {
@@ -274,14 +273,14 @@ tr {
 }
 
 .about-us-container {
-    display: flex;
-    justify-content: flex-end;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10rem;
 }
 
 .about-us-text {
-    flex-basis: 45%;
+    grid-column: 2 / 3;
     color: #fff;
-    padding: 5rem;
 }
 
 /* Bloque productos */
@@ -374,7 +373,7 @@ footer {
     text-align: center;
 }
 
-/* Nosotros */
+/* Nosotros - página*/
 
 .about h2 {
     text-align: center;
@@ -383,7 +382,7 @@ footer {
 
 .about-us-main {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit,minmax(380px, 1fr));
     gap: 4rem;
     margin-top: 2rem;
 }
@@ -459,7 +458,7 @@ footer {
 
 /* Contacto */
 .form-container {
-    width: 600px;
+    max-width: 600px;
     margin-inline: auto;
 }
 
