@@ -5,7 +5,7 @@ const cartContent = document.querySelector('.cart__content-container');
 const cartBody = document.querySelector('.cart-list tbody');
 const clearCartButton = document.querySelector('.cart__empty-button')
 const items = document.querySelector('.products-list');
-let products = [];
+let products = new Map();
 
 setEventListeners();
 function setEventListeners() {
@@ -53,17 +53,9 @@ function getItem(evt) {
       price: product.children[1].children[2].textContent,
       ammount: 1
     }
-    
-    // Check if repeated
-    if(products.some(element => element.id === productContent.id)) {
-      products.forEach(productObj => {
-        if(productObj.id === productContent.id) {
-          productObj.ammount++
-        }
-      })
-    } else {
-      products = [...products, productContent]
-    }
+
+    // Check if repeated ? increase ammount : add to Map
+    products.has(productContent.id) ? products.get(productContent.id).ammount++ : products.set(productContent.id, productContent);
     generateCartHTML()
   }
 }
@@ -75,6 +67,8 @@ function generateCartHTML() {
   checkForEmpty()
 
   // Generate new HTML
+
+
   products.forEach((product) => {
     const cartRow = document.createElement('tr');
     cartRow.innerHTML = `
@@ -107,13 +101,13 @@ function generateCartHTML() {
 function deleteItem(evt) {
   if(evt.target.classList.contains('bi-x-circle-fill')) {
     const deleteButtonId = evt.target.parentElement.getAttribute('data-id');
-    products = products.filter(product => product.id !== deleteButtonId);
+    products.delete(deleteButtonId);
     generateCartHTML();
   }
 }
 
 // Clear cart
 function clearCart() {
-  products = []
+  products = new Map()
   generateCartHTML()
 }
