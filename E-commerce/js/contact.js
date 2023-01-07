@@ -14,14 +14,20 @@ inputs.forEach(input => {
 })
 
 function validate(evt) {
+  clearMainObj(evt.target.id)
+
   const empty = checkForEmpty(evt.target);
+  if(!empty) {return}
   const input = validateInput(evt.target);
-  console.log(contactMainObj)
-  
-  if (empty && input) {
-    contactMainObj[evt.target.id] = evt.target.value
-    console.log(contactMainObj)
+  if(!input) {return}
+
+  if(evt.target.name === 'type-of-person') {
+    contactMainObj[evt.target.name] = evt.target.value
+    return
   }
+  contactMainObj[evt.target.id] = evt.target.value
+  console.log(contactMainObj)
+
 }
 
 function checkForEmpty(target) {
@@ -31,37 +37,32 @@ function checkForEmpty(target) {
     case 'categorias':      return true;
     case 'type-of-person':  return true;
   }
-  
-  // Check value
+
   const value = target.value.trim();
   if(value === '') {
     const label = target.parentElement.children[0].innerText;
-    const elementParent = target.parentElement;
-    const alertMessage = `El campo ${label} es obligatorio!`;
   
     clearMainObj(target.id); //Clear MainObj entry with ID
-    deleteAlert(elementParent);
-    createAlert(alertMessage, elementParent);
+    deleteAlert(target.parentElement);
+    createAlert(`El campo ${label} es obligatorio!`, target.parentElement);
     return false;
   }
+  deleteAlert(target.parentElement);
   return true;
 }
 
 function validateInput(target) {
-  if(target.value.trim() !== '') {
+  // Validate email input
+  if(target.type === 'email') {
     deleteAlert(target.parentElement)
-
-    // Validate email input
-    if(target.type === 'email') {
-      let result = emailValidation(target.value)
-      if(!result){
-        clearMainObj(target.id); //Clear MainObj entry with ID
-        createAlert('Email inválido', target.parentElement);
-      }
-      return result;
+    let result = emailValidation(target.value);
+    if(!result){
+      clearMainObj(target.id); //Clear MainObj entry with ID
+      createAlert('Email inválido', target.parentElement);
     }
-    return true
+    return result;
   }
+  return true
 }
 
 function emailValidation(email) {
