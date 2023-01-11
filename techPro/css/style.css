@@ -191,6 +191,10 @@ h3 {
 
 /* Newsletter section */
 
+.newsletter {
+    min-height: 100px;
+}
+
 .newsletter-image {
     overflow: hidden;
 }
