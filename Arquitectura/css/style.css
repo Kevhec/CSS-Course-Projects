@@ -1,0 +1,313 @@
+:root {
+    --cl-neutral-300: #ffffff;
+    --cl-neutral-500: #343a40;
+    --cl-neutral-700: #111111;
+
+    --ff-400: 'Raleway', sans-serif;
+    --fs-400: 1rem;         /* 16px */
+    --fs-600: 3rem;         /* 48px */
+    --fs-700: 3.125rem;     /* 50px */
+    --fs-900: 3.625rem;     /* 58px */
+    
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-700: 700;
+    --fw-900: 900;
+
+    --sz-300: 0.625rem;     /* 10px */
+    --sz-400: 0.938rem;     /* 15px */
+    --sz-500: 1.25rem;      /* 20px */
+    --sz-600: 1.563rem;     /* 25px */
+    --sz-700: 2.5rem;       /* 40px */
+    --sz-800: 3.125rem;     /* 50px */
+}
+
+/* general styles */
+
+body {
+    font-size: var(--fs-400);
+    font-family: var(--ff-400);
+    line-height: 1.8;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: var(--fw-900);
+    margin: var(--sz-300) 0 var(--sz-700) 0;
+}
+
+h1 {
+    font-size: var(--fs-600);
+}
+
+h2 {
+    font-size: var(--fs-900);
+}
+
+h3 {
+    font-size: var(--sz-700);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 75rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.btn {
+    color: var(--cl-neutral-500);
+    background-color: var(--cl-neutral-300);
+    border: 1px solid var(--cl-neutral-500);
+    padding: calc(var(--sz-300) / 2) var(--sz-500); /* 5px 20px */
+    cursor: pointer;
+    transition: background-color 200ms ease-out;
+}
+
+.btn:hover {
+    color: var(--cl-neutral-300);
+    background-color: var(--cl-neutral-500);
+}
+
+/* specific styles */
+/** Header **/
+
+.page-header {
+    padding: var(--sz-800) 0;
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.header-content {
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    color: var(--cl-neutral-300);
+}
+
+.logo {
+    font-size: 1.875rem;    /* 30px */
+    line-height: 1.2;
+}
+
+.logo span {
+    font-weight: var(--fw-300);
+}
+
+.contact-nav {
+    font-size: 1.25rem;;
+}
+
+.contact {
+    display: flex;
+    margin-bottom: var(--sz-300);
+    justify-content: center;
+}
+
+.contact::before {
+    content: "";
+    width: var(--sz-700);
+    height: var(--sz-700);
+    background-image: url(../img/telefono.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: var(--sz-300);
+}
+
+.main-nav {
+    margin-top: var(--sz-400);
+}
+
+.main-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-link:not(:last-of-type) {
+    margin-bottom: var(--sz-300);
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, .5);
+    color: var(--cl-neutral-700);
+    cursor: pointer;
+}
+
+.slogan h2 {
+    font-size: 1.875rem;
+    margin: unset;
+    line-height: 1.2;
+}
+
+.slogan p {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+/* About us */
+.about-us {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    background-image: url(../img/nosotros.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom 10% center;
+}
+
+.about-us__content {
+    padding: var(--sz-700) var(--sz-500) 0;
+    background-color: var(--cl-neutral-300);
+}
+
+.about-us__content__title {
+    line-height: 1.5;
+    margin: var(--sz-300) 0;
+}
+
+/** Catalog **/
+.catalog__model {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    margin-bottom: var(--sz-700);
+}
+
+.catalog__title {
+    line-height: 1.5;
+}
+
+.model-1 {
+    background-image: url(../img/modelo_basico.jpg);
+}
+
+.model-2 {
+    background-image: url(../img/modelo_premier.jpg);
+}
+
+.model-3 {
+    background-image: url(../img/modelo_elite.jpg);
+}
+
+.catalog__model__content {
+    padding: var(--sz-800);
+    background-color: var(--cl-neutral-300);
+}
+
+.catalog__model__title {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.catalog__model__button {
+    margin-top: var(--sz-500);
+}
+
+@media (min-width: 64em) {
+    /* header */
+    .page-header {
+        background-position: center;
+    }
+
+    .header-content {
+        text-align: unset;
+    }
+
+    .logo-and-nav {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .logo {
+        font-size: var(--fs-600);
+    }
+
+    .contact {
+        justify-content: right;
+    }
+
+    .main-nav {
+        margin-top: var(--sz-300);
+    }
+
+    .main-nav ul {
+        display: flex;
+    }
+
+    .nav-link:not(:last-of-type) {
+        margin-bottom: unset;
+    }
+
+    .nav-link {
+        padding: var(--sz-300) var(--sz-500);
+        transition: background-color 150ms ease, color 150ms ease;
+    }
+
+    .slogan {
+        text-align: right;
+    }
+    
+    .slogan h2 {
+        font-size: var(--fs-700);
+    }
+
+    .about-us {
+        margin-top: var(--sz-700);
+        grid-template-columns: repeat(3, 1fr);
+        background-size: 65%;
+    }
+
+    .about-us__content {
+        grid-column: 2 / 4;
+        padding: var(--sz-800) var(--sz-700) var(--sz-700);
+    }
+
+    .catalog__model {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .model-1 {
+        background-position: right;
+    }
+
+    .model-1 .catalog__model__content {
+        grid-row: 2 / 3;
+        grid-column: 1 / 4;
+    }
+
+    .model-2 {
+        background-position: left;
+    }
+
+    .model-2 .catalog__model__content {
+        grid-row: 1 / 2;
+        grid-column: 4 / 7;
+    }
+
+    .model-3 {
+        background-position: right;
+    }
+
+    .model-3 .catalog__model__content {
+        grid-row: 1 / 2;
+        grid-column: 1 / 4;
+    }
+
+}
+
+/* utility classes */
+.text-center {
+    text-align: center;
+}
+
+.mt-5 {
+    margin-top: var(--sz-700);
+}
