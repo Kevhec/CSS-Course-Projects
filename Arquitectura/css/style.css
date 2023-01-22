@@ -336,39 +336,39 @@ a {
     }
 
     .catalog__model {
-        grid-template-columns: repeat(6, 1fr);
-        margin-bottom: unset;
-    }
-
-    .catalog__model__content {
-        padding: var(--sz-700) var(--sz-800);
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: var(--sz-700);
+        background-size: auto 100%;
     }
 
     .model-1 {
-        background-position: right;
+        background-position: top right;
     }
 
     .model-1 .catalog__model__content {
         grid-row: 2 / 3;
-        grid-column: 1 / 4;
+        grid-column: 1 / 2;
+        padding: var(--sz-700) var(--sz-800) var(--sz-700) 0;
     }
 
     .model-2 {
-        background-position: left;
+        background-position: top left;
     }
 
     .model-2 .catalog__model__content {
         grid-row: 1 / 2;
-        grid-column: 4 / 7;
+        grid-column: 2 / 3;
+        padding: var(--sz-700) 0 var(--sz-700) var(--sz-800);
     }
 
     .model-3 {
-        background-position: right;
+        background-position: top right;
     }
 
     .model-3 .catalog__model__content {
         grid-row: 1 / 2;
-        grid-column: 1 / 4;
+        grid-column: 1 / 2;
+        padding: var(--sz-700) var(--sz-800) var(--sz-700) 0;
     }
 
     .gallery__figure {
