@@ -337,6 +337,11 @@ a {
 
     .catalog__model {
         grid-template-columns: repeat(6, 1fr);
+        margin-bottom: unset;
+    }
+
+    .catalog__model__content {
+        padding: var(--sz-700) var(--sz-800);
     }
 
     .model-1 {
