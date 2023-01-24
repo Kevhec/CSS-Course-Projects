@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nucleus - eWallet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header class="header" id="page-header">
+      <div class="header__container">
+        <div class="header__bar">
+          <figure class="header__logo">
+            <img src="./img/logo.svg" alt="Logo Nucleus">
+          </figure>
+          <nav class="nav">
+            <a href="#about" class="nav__link">¿Qué es?</a>
+            <a href="#" class="nav__link">¿Cómo Funciona?</a>
+            <a href="#" class="nav__link">Precios</a>
+            <a href="#" class="nav__link">Contratar</a>
+          </nav>
+        </div>
+        <div class="header__grid">
+          <div class="header__description">
+            <h1 class="header__heading">
+              Recibe y realiza pagos en tu celular con nucleus
+            </h1>
+            <button class="header__button">Obtener Cuenta</button>
+          </div>
+          <figure class="header__preview">
+            <img src="./img/app_1.svg" alt="Vista previa de la app Nucleus">
+          </figure>
+        </div>
+      </div>
+    </header>
+    <main class="nucleus">
+      <div class="nucleus__container">
+        <h2 class="nucleus__heading" id="about">¿Qué es?</h2>
+        <div class="nucleus__grid">
+          <div class="list">
+            <div class="list__item">
+              <h3 class="list__heading">Fácil</h3>
+              <p class="list__text">Crea una cuenta, envía tu documentación y comienza a utilizar nucleus en un par de horas</p>
+            </div> <!-- Feature -->
+            <div class="list__item">
+              <h3 class="list__heading">Seguro</h3>
+              <p class="list__text">Por su tecnología digital nucleus es imposible de hackear o robar</p>
+            </div> <!-- Feature -->
+            <div class="list__item">
+              <h3 class="list__heading">Administrable</h3>
+              <p class="list__text">Añade o transfiere fondos a tu banco, añade limites o controla tus gastos</p>
+            </div> <!-- Feature -->
+          </div> <!-- Features -->
+          <figure class="nucleus__image">
+            <img src="./img/app_2.svg" alt="">
+          </figure>
+        </div> <!-- nucleus__grid -->
+      </div>
+    </main>
+
+    <button class="up-button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="var(--cl-neutral-400)" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+        <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+      </svg>
+    </button>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
