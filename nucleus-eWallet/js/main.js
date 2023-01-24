@@ -18,4 +18,5 @@ function scrollToTop() {
   rootElement.scrollTo({
     top: 0
   })
+  window.history.pushState({}, "", "/nucleus-eWallet/");
 }
