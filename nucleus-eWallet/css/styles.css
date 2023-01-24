@@ -124,7 +124,7 @@ img {
 }
 
 .header__button {
-    display: block;
+    width: 100%;
     padding: 0.625rem;
     margin-bottom: 2.5rem;
     border: unset;
@@ -214,6 +214,7 @@ img {
     .header__button {
         display: inline-block;
         padding: 0.625rem 1.875rem;
+        width: auto;
     }
 
     .header__button:hover {
