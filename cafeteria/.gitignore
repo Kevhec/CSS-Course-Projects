@@ -1,0 +1,12 @@
+# ignore the src folder
+src/
+
+# ignore node_modules folder
+node_modules/
+
+# ignore gulp file
+gulpfile.js
+
+# ignore the package and package-lock json files
+package.json
+package-lock.json
