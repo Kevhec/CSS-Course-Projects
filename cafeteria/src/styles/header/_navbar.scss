@@ -1,0 +1,35 @@
+@use 'base/variables' as var;
+
+.main-nav {
+    display: flex;
+    flex-direction: column;
+    gap: var.$sz-10;
+    margin-top: var.$sz-50;
+
+    @include var.tablet {
+       flex-direction: row;
+       margin-top: unset;
+       align-items: center;
+    }
+    
+    &__nav-link {
+        text-align: center;
+        color: var.$cl-white;
+        font-size: 1.25rem;
+        font-weight: var.$fw-700;
+        text-transform: uppercase;
+        line-height: 1.15;
+
+        &--current {
+            color: var.$cl-secondary;
+        }
+
+        @include var.desktop {
+            transition: color 100ms ease;
+
+            &:hover {
+                color: var.$cl-secondary;
+            }
+        }
+    } 
+}

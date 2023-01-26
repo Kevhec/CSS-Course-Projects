@@ -1,0 +1,35 @@
+@use './variables' as var;
+
+body {
+    font-family: var.$roboto;
+    font-size: 1rem;
+}
+
+[class$="__container"] {
+    width: 95%;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3 {
+    margin-bottom: 3.125rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+h3 {
+    font-size: 2rem;
+}

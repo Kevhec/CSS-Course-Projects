@@ -1,0 +1,6 @@
+@use 'base/variables' as var;
+
+.main__container {
+    padding: var.$sz-50 var.$sz-20;
+    text-align: center;
+}

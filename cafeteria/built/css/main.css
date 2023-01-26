@@ -206,4 +206,5 @@ h3 {
 
 .icons {
   margin-top: 3.125rem;
+  display: grid;
 }

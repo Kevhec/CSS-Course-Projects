@@ -1,0 +1,19 @@
+@use 'base/variables' as var;
+
+.learn {
+    &__heading {
+        @include var.contentHeading;
+    
+        &::after {
+            $icon-sz: 100px;
+            content: "";
+            display: block;
+            margin: 0 auto;
+            background-image: url(../images/cafe.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: $icon-sz;
+            height: $icon-sz;
+        }
+    }
+}

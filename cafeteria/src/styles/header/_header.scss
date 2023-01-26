@@ -1,0 +1,57 @@
+@use 'base/variables' as var;
+
+.header {
+    background-color: hsla(0, 0%, 0%, .6);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: var.$sz-50 0;
+
+    @include var.tablet {
+       min-height: 43.75rem;
+    }
+
+    &__bar {
+        @include var.tablet {
+           display: flex;
+           justify-content: space-between;
+           gap: 1rem;
+        }
+    }
+
+    &__logo {
+        width: 180px;
+        margin: 0 auto;
+
+        @include var.tablet {
+           margin: unset;
+        }
+    }
+
+    &__heading {
+        color: var.$cl-white;
+        text-align: center;
+        margin: var.$sz-50 0;
+        text-transform: uppercase;
+
+        @include var.tablet {
+           margin-top: 6.25rem;
+        }
+    }
+
+    &__span {
+        color: var.$cl-secondary;
+    }
+}
+
+.notavif.notwebp .header--home {
+    background-image: url(../images/header_inicio.jpg);
+}
+
+.webp .header--home {
+    background-image: url(../images/header_inicio.webp);
+}
+
+.avif .header--home {
+    background-image: url(../images/header_inicio.avif);
+}

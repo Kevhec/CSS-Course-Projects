@@ -1,0 +1,6 @@
+@use 'base/variables' as var;
+
+.icons {
+    margin-top: var.$sz-50;
+    display: grid;
+}
