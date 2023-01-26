@@ -1,0 +1,34 @@
+@use 'base/variables' as var;
+
+.product {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    font-size: 1.375rem;
+    margin-bottom: var.$sz-20;
+
+    @include var.tablet {
+       height: 6.25rem;
+    }
+
+    &__content {
+        flex: 5;
+    }
+
+    &__name {
+        color: var.$cl-white;
+    }
+
+    &__description {
+        color: var.$cl-secondary;
+        font-size: 1.25rem;
+    }
+
+    &__price {
+        font-size: 2.5rem;
+        font-weight: var.$fw-700;
+        flex: 1;
+        color: var.$cl-white;
+        text-align: right;
+    }
+}

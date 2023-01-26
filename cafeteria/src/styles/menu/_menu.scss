@@ -1,0 +1,52 @@
+@use 'base/variables' as var;
+
+.menu {
+    background-color: var.$cl-primary;
+    background-image: url(../images/menu_arriba.svg), url(../images/menu_abajo.svg);
+    background-repeat: no-repeat;
+    background-position: top 35px center, bottom 75px center;
+    background-size: 200%;
+    padding: var.$sz-150 var.$sz-20 var.$sz-200;
+    
+    @include var.tablet {
+        background-size: 100%;
+ 
+        &__grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var.$sz-30;
+
+            @include var.desktop {
+                gap: 5%;
+            }
+        }
+ 
+        &__column {
+         margin-bottom: unset;
+        }
+    }
+
+    @include var.desktop {
+       background-size: 50%;
+    }
+
+    &__heading {
+        font-family: var.$raleway;
+        color: var.$cl-white;
+        text-transform: uppercase;
+        text-align: center;
+
+        &--18px {
+            font-size: 1.125rem;
+            display: block;
+        }
+
+        &--32px {
+            font-size: 2rem;
+        }
+    }
+
+    &__column {
+        margin-bottom: var.$sz-30;
+    }
+}

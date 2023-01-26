@@ -24,7 +24,7 @@ function compileCSS(done) {
     }))
     .pipe(sass(/* {outputStyle: 'compressed'} */))
     .pipe(postcss([autoprefixer()]))
-    .pipe(dest('./built/css'));
+    .pipe(dest('./build/css'));
   
   done();
 }
@@ -32,7 +32,7 @@ function compileCSS(done) {
 function images(done) {
   src('./src/images/**/*')
     .pipe(imagemin({optimizationLevel: 3}))
-    .pipe(dest('./built/images'));
+    .pipe(dest('./build/images'));
 
   done();
 }
@@ -44,7 +44,7 @@ function imageToWebp(done) {
 
   src('./src/images/**/*.{png,jpg}')
     .pipe(webp(options))
-    .pipe(dest('./built/images'));
+    .pipe(dest('./build/images'));
 
   done();
 }
@@ -56,7 +56,7 @@ function imageToAvif(done) {
 
   src('./src/images/**/*.{png,jpg}')
     .pipe(avif(options))
-    .pipe(dest('./built/images'));
+    .pipe(dest('./build/images'));
 
   done();
 }
