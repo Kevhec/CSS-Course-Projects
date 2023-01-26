@@ -1,6 +1,14 @@
 @use 'base/variables' as var;
 
-.main__container {
-    padding: var.$sz-50 var.$sz-20;
-    text-align: center;
+.main {
+    &__container {
+        padding: var.$sz-50 var.$sz-20;
+        text-align: center;
+
+        @include var.tablet {
+           background-color: var.$cl-white;
+           margin-top: calc(-1 * var.$sz-100);
+           padding: var.$sz-100;
+        }
+    }
 }

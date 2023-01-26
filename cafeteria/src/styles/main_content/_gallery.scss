@@ -1,0 +1,63 @@
+@use 'base/variables' as var;
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var.$sz-20;
+
+    @include var.desktop {
+       grid-template-columns: repeat(4, 1fr);
+       grid-template-rows: 300px;
+       /* grid-auto-flow: dense; */
+
+       :nth-child(1) {
+        grid-row: 1 / 3;
+       }
+
+       :nth-child(2) {
+        grid-column: 2 / 4;
+       }
+
+       :nth-child(4) {
+        grid-row: 2 / 4;
+        grid-column: 2 / 3;
+       }
+
+       :nth-child(5) {
+        grid-column: 3 / 5;
+       }
+
+       :nth-child(6) {
+        grid-row: 3 / 4;
+        grid-column: 3 / 5;
+       }
+
+       :nth-child(7) {
+        grid-row: 3 / 5;
+       }
+
+       :nth-child(8) {
+        grid-column: 2 / 5;
+       }
+
+       :nth-child(9) {
+        grid-column: 1 / 3;
+       }
+
+       :nth-child(10) {
+        grid-column: 3 / 5;
+       }
+    }
+
+    &__image {
+        height: 18.75rem;
+        object-fit: cover;
+
+        @include var.desktop {
+            width: 100%;
+            &--heigh {
+                height: 100%;
+            }
+        }
+    }
+}

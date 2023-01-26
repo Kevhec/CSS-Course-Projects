@@ -3,4 +3,21 @@
 .icons {
     margin-top: var.$sz-50;
     display: grid;
+    @include var.tablet {
+       grid-template-columns: repeat(3, 1fr);
+       gap: var.$sz-20;
+    }
+
+    &__icon {
+        width: 7.5rem;
+        justify-self: center;
+        margin-bottom: var.$sz-30;
+    }
+
+    &__caption {
+        font-family: var.$bona-nova;
+        font-size: 2rem;
+        color: var.$cl-primary;
+        margin-top: var.$sz-30;
+    }
 }

@@ -1,11 +1,7 @@
 @use 'base/variables' as var;
 
-.learn {
+.involve {
     &__heading {
         @include var.coffeHeading;
-    }
-
-    &__text {
-        line-height: 2;
     }
 }
