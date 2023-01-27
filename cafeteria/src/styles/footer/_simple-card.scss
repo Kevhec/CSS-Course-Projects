@@ -1,0 +1,27 @@
+@use 'base/variables' as var;
+
+.simple-card {
+    margin-bottom: var.$sz-50;
+
+    @include var.tablet {
+       margin-bottom: unset;
+    }
+
+    &__heading {
+        font-family: var.$bona-nova;
+        font-size: 1.5rem;
+        margin-bottom: var.$sz-10;
+        color: var.$cl-secondary;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        font-family: var.$bona-nova;
+        font-size: 1.25rem;
+        line-height: 2;
+    }
+
+    &__line {
+        display: block;
+    }
+}

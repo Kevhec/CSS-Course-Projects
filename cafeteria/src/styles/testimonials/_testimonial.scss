@@ -1,0 +1,26 @@
+@use 'base/variables' as var;
+
+.testimonial {
+    max-width: 500px;
+    padding: var.$sz-20 var.$sz-40;
+    margin: 0 auto;
+    background-color: var.$cl-lightBrown;
+    border-radius: 10px;
+
+    &__text {
+        line-height: 2;
+    }
+
+    &__author {
+        font-family: var.$bona-nova;
+        font-size: 1.5rem;
+        text-align: right;
+        color: var.$cl-primary;
+        margin: 1rem 0;
+
+        &::before {
+            content: "-";
+            margin-right: 5px;
+        }
+    }
+}

@@ -34,3 +34,12 @@ h2 {
 h3 {
     font-size: 2rem;
 }
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+[class$="--coffeeHeading"] {
+    @include var.coffeeHeading;
+}

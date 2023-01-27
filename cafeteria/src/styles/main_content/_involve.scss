@@ -1,7 +1,0 @@
-@use 'base/variables' as var;
-
-.involve {
-    &__heading {
-        @include var.coffeHeading;
-    }
-}

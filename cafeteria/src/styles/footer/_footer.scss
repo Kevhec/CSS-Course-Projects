@@ -1,0 +1,27 @@
+@use 'base/variables' as var;
+
+.footer {
+    background-color: var.$cl-primary;
+
+    &__container {
+        text-align: center;
+    }
+
+    &__info {
+        background-color: var.$cl-white;
+        padding: var.$sz-50;
+
+        @include var.tablet {
+           display: grid;
+           grid-template-columns: repeat(3, 1fr);
+           gap: var.$sz-20;
+        }
+    }
+
+    &__copy {
+        font-size: 1rem;
+        text-align: center;
+        color: var.$cl-white;
+        padding: var.$sz-20;
+    }
+}

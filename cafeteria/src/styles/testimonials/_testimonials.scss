@@ -1,0 +1,9 @@
+@use 'base/variables' as var;
+
+.testimonials {
+    &__container {
+        background-color: var.$cl-white;
+        padding: var.$sz-100 var.$sz-20;
+        margin-top: calc(-1 * var.$sz-100);
+    }
+}

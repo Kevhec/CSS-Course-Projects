@@ -4,9 +4,9 @@
     background-color: var.$cl-primary;
     background-image: url(../images/menu_arriba.svg), url(../images/menu_abajo.svg);
     background-repeat: no-repeat;
-    background-position: top 35px center, bottom 75px center;
+    background-position: top 35px center, bottom 100px center;
     background-size: 200%;
-    padding: var.$sz-150 var.$sz-20 var.$sz-200;
+    padding: var.$sz-150 var.$sz-20 calc(var.$sz-200 + var.$sz-20);
     
     @include var.tablet {
         background-size: 100%;
