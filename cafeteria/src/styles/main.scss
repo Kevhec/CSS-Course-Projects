@@ -1,6 +1,5 @@
 @use 'base';
-@use 'header';
+@use 'components';
 @use 'main_content';
-@use 'menu';
-@use 'testimonials';
-@use 'footer';
+@use 'sections';
+@use 'internals';

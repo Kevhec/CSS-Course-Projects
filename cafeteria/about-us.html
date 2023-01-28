@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafetería - SASS</title>
+    <script src="./scripts/webp-avif-bg-support.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova&family=Raleway:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./build/css/main.css">
+  </head>
+<body>
+  <header class="header header--about-us">
+    <div class="header__container">
+      <div class="header__bar">
+        <figure class="header__logo">
+          <img src="./build/images/logo.svg" alt="logo cafetería">
+        </figure>
+        <nav class="main-nav">
+          <a href="./index.html" class="main-nav__nav-link">Inicio</a>
+          <a href="./about-us.html" class="main-nav__nav-link main-nav__nav-link--current">Nosotros</a>
+          <a href="./process.html" class="main-nav__nav-link">Proceso</a>
+          <a href="./menu.html" class="main-nav__nav-link">Menú</a>
+          <a href="./gallery.html" class="main-nav__nav-link">Galería</a>
+          <a href="./contact.html" class="main-nav__nav-link">Contacto</a>
+        </nav>
+      </div><!-- header__bar -->
+      <h1 class="header__heading">Una nueva <span class="header__heading--span">experiencia</span> cada día<br></h1>
+    </div><!-- header__container -->
+  </header>
+  <main class="about-us">
+    <div class="about-us__container">
+      <h1 class="about-us__heading about-us__heading--coffeeHeading">
+        <span class="about-us__heading--span">Conoce más</span>
+        Sobre nosotros
+      </h1>
+      <div class="about-us__grid">
+        <picture class="about-us__image">
+          <source srcset="./build/images/nosotros_sidebar.avif" type="image/avif">
+          <source srcset="./build/images/nosotros_sidebar.webp" type="image/webp">
+          <img loading="lazy" decoding="async" src="./build/images/nosotros_sidebar.jpg" alt="barra al interior del café">
+        </picture>
+        <div class="about-us__content">
+          <p class="about-us__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos ducimus, quos quo, laudantium temporibus ratione odit officia labore incidunt vitae repellat beatae corrupti nam. Quis dolor possimus illum unde! Excepturi?</p>
+          <blockquote class="about-us__quote">Excelente Sabor!</blockquote>
+          <p class="about-us__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos ducimus, quos quo, laudantium temporibus ratione odit officia labore incidunt vitae repellat beatae corrupti nam. Quis dolor possimus illum unde! Excepturi?</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__info">
+        <div class="simple-card">
+          <h3 class="simple-card__heading">Ubicación</h3>
+          <p class="simple-card__text">
+            <span class="simple-card__line">Nicolas Copérnico 5990</span>
+            <span class="simple-card__line">Guadalajara, Jalisco</span>
+          </p>
+        </div><!-- simple-card -->
+        <div class="simple-card">
+          <h3 class="simple-card__heading">Reservación</h3>
+          <p class="simple-card__text">
+            <span class="simple-card__line">Tel. 3850-9102</span>
+            <span class="simple-card__line simple-card__line--semiBold"><a href="tel:38509102">Llamar</a></span>
+          </p>
+        </div><!-- simple-card -->
+        <div class="simple-card">
+          <h3 class="simple-card__heading">Horario</h3>
+          <p class="simple-card__text">
+            <span class="simple-card__line">Lun-Jue: 11:00 - 22:00</span>
+            <span class="simple-card__line">Vie-Sab: 09:00 - 00:00</span>
+            <span class="simple-card__line">Domingo: Cerrado</span>
+          </p>
+        </div><!-- simple-card -->
+      </div><!-- footer__info -->
+      <p class="footer__copy">&copy; Todos los derechos reservados.<br>La Cafetería</p>
+    </div>
+  </footer>
+</body>
+</html>

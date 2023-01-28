@@ -1,0 +1,48 @@
+@use 'base/variables' as var;
+
+.about-us {
+    &__container {
+        padding: var.$sz-50 var.$sz-20;
+        background-color: var.$cl-white;
+
+        @include var.tablet {
+           padding: var.$sz-100;
+           margin-top: calc(-1 * var.$sz-100);
+        }
+    }
+
+    &__grid {
+        @include var.tablet {
+           display: grid;
+           grid-template-columns: repeat(2, 1fr);
+           gap: 10%;
+        }
+    }
+
+    &__image {
+        padding: 30px;
+        box-shadow: 9px 10px 5px -7px rgba(0,0,0,.35);
+        transform: rotate(-6deg);
+        height: fit-content;
+
+        @include var.tablet {
+           align-self: center;
+        }
+    }
+
+    &__content {
+        margin-top: var.$sz-50;
+    }
+
+    &__text {
+        margin: 1rem 0;
+        line-height: 2;
+    }
+
+    &__quote {
+        padding: var.$sz-10;
+        border-left: 5px solid var.$cl-primary;
+        font-size: 1.25rem;
+        line-height: 1.15;
+    }
+}

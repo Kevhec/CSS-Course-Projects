@@ -37,12 +37,15 @@
         @include var.tablet {
            margin-top: 6.25rem;
         }
+        
+        &--span {
+            color: var.$cl-secondary;
+        }
     }
 
-    &__span {
-        color: var.$cl-secondary;
-    }
 }
+
+/* page - home */
 
 .notavif.notwebp .header--home {
     background-image: url(../images/header_inicio.jpg);
@@ -54,4 +57,17 @@
 
 .avif .header--home {
     background-image: url(../images/header_inicio.avif);
+}
+
+/* page - about-us */
+.notavif.notwebp .header--about-us {
+    background-image: url(../images/header_nosotros.jpg);
+}
+
+.webp .header--about-us {
+    background-image: url(../images/header_nosotros.webp);
+}
+
+.avif .header--about-us {
+    background-image: url(../images/header_nosotros.avif);
 }
