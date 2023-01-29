@@ -61,7 +61,6 @@ function imageToAvif(done) {
   done();
 }
 
-
 function dev() {
   watch('./src/styles/**/*.scss', compileCSS);
   watch('./src/images/**/*', parallel(images, imageToWebp, imageToAvif));

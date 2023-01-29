@@ -1,8 +1,10 @@
 const navLinks = document.querySelectorAll('.main-nav__nav-link');
-const path = ("." + document.location.pathname);
+const docRef = (document.location.href);
 
 navLinks.forEach(link => {
-  if(link.getAttribute('href') === path) {
+  const href = link.getAttribute('href').replace('.', '');
+  
+  if(docRef.indexOf(href) > -1) {
     link.classList.add('main-nav__nav-link--current')
   }
 })
