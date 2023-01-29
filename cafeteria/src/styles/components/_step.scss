@@ -1,0 +1,43 @@
+@use 'base/variables' as var;
+
+.step {
+    margin-bottom: var.$sz-50;
+
+    @include var.tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-flow: dense;
+        align-items: center;
+        gap: 3.125rem;
+
+        &:nth-of-type(2n) {
+            [class$="__image"] {
+                grid-column: 2 / 3;
+            }
+        }
+    }
+
+    &__content {
+        margin-top: var.$sz-10;
+    }
+
+    &__heading {
+        font-family: var.$raleway;
+        font-size: 2rem;
+        color: var.$cl-primary;
+        text-transform: uppercase;
+        margin: 0 0 1rem;
+        
+        &::after {
+            content: "";
+            display: block;
+            width: 50%;
+            height: 5px;
+            background-color: var.$cl-secondary;
+        }    
+    }
+
+    &__text {
+        line-height: 2;
+    }
+}

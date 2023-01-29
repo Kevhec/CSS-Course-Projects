@@ -1,0 +1,13 @@
+@use 'base/variables' as var;
+
+.process {
+    &__container {
+        padding: var.$sz-50 var.$sz-20;
+        background-color: var.$cl-white;
+
+        @include var.tablet {
+            margin-top: calc(-1 * var.$sz-100);
+            padding: var.$sz-100;
+        }
+    }
+}

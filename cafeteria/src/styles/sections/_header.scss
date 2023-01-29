@@ -45,7 +45,7 @@
 
 }
 
-/* page - home */
+/* page ~ home */
 
 .notavif.notwebp .header--home {
     background-image: url(../images/header_inicio.jpg);
@@ -59,7 +59,7 @@
     background-image: url(../images/header_inicio.avif);
 }
 
-/* page - about-us */
+/* page ~ about-us */
 .notavif.notwebp .header--about-us {
     background-image: url(../images/header_nosotros.jpg);
 }
@@ -70,4 +70,17 @@
 
 .avif .header--about-us {
     background-image: url(../images/header_nosotros.avif);
+}
+
+/* page ~ process */
+.notavif.notwebp .header--process {
+    background-image: url(../images/header_proceso.jpg);
+}
+
+.webp .header--process {
+    background-image: url(../images/header_proceso.webp);
+}
+
+.avif .header--process {
+    background-image: url(../images/header_proceso.avif);
 }
