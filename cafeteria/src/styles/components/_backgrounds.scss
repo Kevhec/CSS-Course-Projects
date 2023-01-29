@@ -1,0 +1,68 @@
+.notavif.notwebp {
+    .header {
+        &--home {
+            background-image: url(../images/header_inicio.jpg);
+        }
+        &--about-us {
+            background-image: url(../images/header_nosotros.jpg);
+        }
+        &--process {
+            background-image: url(../images/header_proceso.jpg);
+        }
+        &--menu {
+            background-image: url(../images/header_menu.jpg);
+        }
+    }
+
+    .ingredients {
+        &__container {
+            background-image: url(../images/cafe.jpg);
+        }
+    }
+}
+
+.webp {
+    .header {
+        &--home {
+            background-image: url(../images/header_inicio.webp);
+        }
+        &--about-us {
+            background-image: url(../images/header_nosotros.webp);
+        }
+        &--process {
+            background-image: url(../images/header_proceso.webp);
+        }
+        &--menu {
+            background-image: url(../images/header_menu.webp);
+        }
+    }
+
+    .ingredients {
+        &__container {
+            background-image: url(../images/cafe.webp);
+        }
+    }
+}
+
+.avif {
+    .header {
+        &--home {
+            background-image: url(../images/header_inicio.avif);
+        }
+        &--about-us {
+            background-image: url(../images/header_nosotros.avif);
+        }
+        &--process {
+            background-image: url(../images/header_proceso.avif);
+        }
+        &--menu {
+            background-image: url(../images/header_menu.avif);
+        }
+    }
+
+    .ingredients {
+        &__container {
+            background-image: url(../images/cafe.avif);
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@use 'base/variables' as var;
+
+.ingredients {
+    &__container {
+        position: relative;
+        padding: var.$sz-50 var.$sz-20;
+        background-color: var.$cl-white;
+        background-size: 110px;
+        background-repeat: no-repeat;
+        background-position: bottom right;
+
+        @include var.tablet {
+           padding: var.$sz-100 var.$sz-100 0;
+           background-size: 30%;
+        }
+
+        @include var.desktop {
+           padding-bottom: 0;
+           background-position: bottom right 10%;
+           background-size: 35%;
+        }
+    }
+
+    &__content {
+        @include var.desktop {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding-bottom: var.$sz-20;
+        }
+    }
+
+    &__text {
+        line-height: 2;
+        shape-outside: polygon(0 0, 100% 0, 100% 65%, 85% 70%, 70% 85%, 70% 100%, 0 100%);
+    }
+}
