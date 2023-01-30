@@ -719,6 +719,14 @@ ul {
   font-weight: 700;
   text-transform: uppercase;
 }
+@media screen and (min-width: 1024px) {
+  .contact__submit {
+    cursor: pointer;
+  }
+  .contact__submit:hover {
+    background-color: #855f26;
+  }
+}
 .contact__submit:active {
   background-color: #c39c63;
 }

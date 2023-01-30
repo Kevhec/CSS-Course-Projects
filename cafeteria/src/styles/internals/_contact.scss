@@ -33,6 +33,13 @@
         font-weight: var.$fw-700;
         text-transform: uppercase;
 
+        @include var.desktop {
+           cursor: pointer;
+           &:hover {
+            background-color: #855f26;
+           }
+        }
+
         &:active {
             background-color: var.$cl-secondary;
         }
