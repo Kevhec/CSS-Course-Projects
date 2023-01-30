@@ -1,3 +1,5 @@
+@use 'base/variables' as var;
+
 .notavif.notwebp {
     .header {
         &--home {
@@ -12,12 +14,26 @@
         &--menu {
             background-image: url(../images/header_menu.jpg);
         }
+        &--gallery {
+            background-image: url(../images/header_galeria.jpg);
+        }
+        &--contact {
+            background-image: url(../images/header_contacto.jpg);
+        }
     }
 
     .ingredients {
         &__container {
             background-image: url(../images/cafe.jpg);
         }
+    }
+
+    @include var.tablet {
+       .contact {
+        &__container {
+            background-image: url(../images/granos_cafe.jpg);
+        }
+       }
     }
 }
 
@@ -35,11 +51,25 @@
         &--menu {
             background-image: url(../images/header_menu.webp);
         }
+        &--gallery {
+            background-image: url(../images/header_galeria.webp);
+        }
+        &--contact {
+            background-image: url(../images/header_contacto.webp);
+        }
     }
 
     .ingredients {
         &__container {
             background-image: url(../images/cafe.webp);
+        }
+    }
+
+    @include var.tablet {
+        .contact {
+            &__container {
+                background-image: url(../images/granos_cafe.webp);
+            }
         }
     }
 }
@@ -58,11 +88,25 @@
         &--menu {
             background-image: url(../images/header_menu.avif);
         }
+        &--gallery {
+            background-image: url(../images/header_galeria.avif);
+        }
+        &--contact {
+            background-image: url(../images/header_contacto.avif);
+        }
     }
 
     .ingredients {
         &__container {
             background-image: url(../images/cafe.avif);
+        }
+    }
+
+    @include var.tablet {
+        .contact {
+            &__container {
+                background-image: url(../images/granos_cafe.avif);
+            }
         }
     }
 }

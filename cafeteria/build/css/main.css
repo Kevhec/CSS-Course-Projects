@@ -131,8 +131,19 @@ ul {
 .notavif.notwebp .header--menu {
   background-image: url(../images/header_menu.jpg);
 }
+.notavif.notwebp .header--gallery {
+  background-image: url(../images/header_galeria.jpg);
+}
+.notavif.notwebp .header--contact {
+  background-image: url(../images/header_contacto.jpg);
+}
 .notavif.notwebp .ingredients__container {
   background-image: url(../images/cafe.jpg);
+}
+@media screen and (min-width: 768px) {
+  .notavif.notwebp .contact__container {
+    background-image: url(../images/granos_cafe.jpg);
+  }
 }
 
 .webp .header--home {
@@ -147,8 +158,19 @@ ul {
 .webp .header--menu {
   background-image: url(../images/header_menu.webp);
 }
+.webp .header--gallery {
+  background-image: url(../images/header_galeria.webp);
+}
+.webp .header--contact {
+  background-image: url(../images/header_contacto.webp);
+}
 .webp .ingredients__container {
   background-image: url(../images/cafe.webp);
+}
+@media screen and (min-width: 768px) {
+  .webp .contact__container {
+    background-image: url(../images/granos_cafe.webp);
+  }
 }
 
 .avif .header--home {
@@ -163,8 +185,19 @@ ul {
 .avif .header--menu {
   background-image: url(../images/header_menu.avif);
 }
+.avif .header--gallery {
+  background-image: url(../images/header_galeria.avif);
+}
+.avif .header--contact {
+  background-image: url(../images/header_contacto.avif);
+}
 .avif .ingredients__container {
   background-image: url(../images/cafe.avif);
+}
+@media screen and (min-width: 768px) {
+  .avif .contact__container {
+    background-image: url(../images/granos_cafe.avif);
+  }
 }
 
 .main-nav {
@@ -332,6 +365,35 @@ ul {
 }
 .step__text {
   line-height: 2;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+.field__label {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.375rem;
+  color: #5e311e;
+}
+.field__input {
+  border: 3px solid #5e311e;
+  padding: 0.625rem;
+  color: #5e311e;
+}
+.field__input::-moz-placeholder {
+  color: #5e311e;
+}
+.field__input::placeholder {
+  color: #5e311e;
+}
+.field__input--select {
+  background-color: #ebe7de;
+}
+.field__input:focus-within {
+  outline: unset;
+  border-color: #c39c63;
 }
 
 .main__container {
@@ -613,4 +675,50 @@ ul {
 .ingredients__text {
   line-height: 2;
   shape-outside: polygon(0 0, 100% 0, 100% 65%, 85% 70%, 70% 85%, 70% 100%, 0 100%);
+}
+
+.gallery-page__container {
+  background-color: #ffffff;
+  padding: 3.125rem 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .gallery-page__container {
+    padding: 6.25rem;
+  }
+}
+
+.contact__container {
+  padding: 3.125rem 1.25rem;
+  background-color: #ffffff;
+}
+@media screen and (min-width: 768px) {
+  .contact__container {
+    padding: 6.25rem;
+    background-repeat: no-repeat;
+    background-position: top 70% right;
+    background-size: 35%;
+  }
+}
+.contact__fieldset {
+  border: unset;
+  padding: unset;
+}
+@media screen and (min-width: 768px) {
+  .contact__fieldset {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.contact__submit {
+  width: 100%;
+  padding: 0.625rem;
+  border: unset;
+  background-color: #5e311e;
+  color: #ffffff;
+  font-size: 1.375rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.contact__submit:active {
+  background-color: #c39c63;
 }

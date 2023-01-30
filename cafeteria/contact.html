@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafetería ~ Haz tu reserva</title>
+    <script src="./scripts/webp-avif-bg-support.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova&family=Raleway:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./build/css/main.css">
+    <link rel="shortcut icon" href="./build/images/favicon.svg" type="image/x-icon">
+  </head>
+<body>
+  <header class="header header--contact">
+    <div class="header__container">
+      <div class="header__bar">
+        <figure class="header__logo">
+          <img src="./build/images/logo.svg" alt="logo cafetería">
+        </figure>
+        <nav class="main-nav">
+          <a href="./index.html" class="main-nav__nav-link">Inicio</a>
+          <a href="./about-us.html" class="main-nav__nav-link">Nosotros</a>
+          <a href="./process.html" class="main-nav__nav-link">Proceso</a>
+          <a href="./menu.html" class="main-nav__nav-link">Menú</a>
+          <a href="./gallery.html" class="main-nav__nav-link">Galería</a>
+          <a href="./contact.html" class="main-nav__nav-link">Contacto</a>
+        </nav>
+      </div><!-- header__bar -->
+      <h1 class="header__heading">Mejores granos,<br><span class="header__heading--span">mejor café</span></h1>
+    </div><!-- header__container -->
+  </header>
+  <main class="contact">
+    <div class="contact__container">
+      <h2 class="contact__heading contact__heading--coffeeHeading">
+        <span class="contact__heading--span">Reserva tu</span>
+        Mesa
+      </h2>
+      <fieldset class="contact__fieldset">
+        <form class="contact__form">
+          <div class="field">
+            <label for="name" class="field__label">Nombre:</label>
+            <input class="field__input" type="text" name="name" id="name" placeholder="Tu nombre">
+          </div> <!-- name -->
+          <div class="field">
+            <label for="email" class="field__label">Email:</label>
+            <input type="text" name="email" id="email" class="field__input" placeholder="email@correo.com">
+          </div> <!-- email -->
+          <div class="field">
+            <label for="people" class="field__label">Personas:</label>
+            <select name="people" id="people" class="field__input field__input--select">
+              <option value="" disabled selected>-- Seleccione --</option>
+              <option value="one">1</option>
+              <option value="two">2</option>
+              <option value="three">3</option>
+              <option value="four">4</option>
+              <option value="more">4+</option>
+            </select>
+          </div> <!-- people -->
+          <div class="field">
+            <label for="time" class="field__label">Hora:</label>
+            <input type="time" name="time" id="time" class="field__input">
+          </div> <!-- time -->
+          <div class="field">
+            <label for="date" class="field__label">Fecha:</label>
+            <input type="date" name="date" id="date" class="field__input">
+          </div>
+          <button type="submit" class="contact__submit">Enviar</button>
+        </form>
+      </fieldset>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__info">
+        <div class="simple-card">
+          <h3 class="simple-card__heading">Ubicación</h3>
+          <p class="simple-card__text">
+            <span class="simple-card__line">Nicolas Copérnico 5990</span>
+            <span class="simple-card__line">Guadalajara, Jalisco</span>
+          </p>
+        </div><!-- simple-card -->
+        <div class="simple-card">
+          <h3 class="simple-card__heading">Reservación</h3>
+          <p class="simple-card__text">
+            <span class="simple-card__line">Tel. 3850-9102</span>
+            <span class="simple-card__line simple-card__line--semiBold"><a href="tel:38509102">Llamar</a></span>
+          </p>
+        </div><!-- simple-card -->
+        <div class="simple-card">
+          <h3 class="simple-card__heading">Horario</h3>
+          <p class="simple-card__text">
+            <span class="simple-card__line">Lun-Jue: 11:00 - 22:00</span>
+            <span class="simple-card__line">Vie-Sab: 09:00 - 00:00</span>
+            <span class="simple-card__line">Domingo: Cerrado</span>
+          </p>
+        </div><!-- simple-card -->
+      </div><!-- footer__info -->
+      <p class="footer__copy">&copy; Todos los derechos reservados.<br>La Cafetería</p>
+    </div>
+  </footer>
+
+  <script src="./scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+@use 'base/variables' as var;
+
+.contact {
+    &__container {
+        padding: var.$sz-50 var.$sz-20;
+        background-color: var.$cl-white;
+
+        @include var.tablet {
+           padding: var.$sz-100;
+           background-repeat: no-repeat;
+           background-position: top 70% right;
+           background-size: 35%;
+        }
+    }
+
+    &__fieldset {
+        border: unset;
+        padding: unset;
+
+        @include var.tablet {
+           display: grid;
+           grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__submit {
+        width: 100%;
+        padding: var.$sz-10;
+        border: unset;
+        background-color: var.$cl-primary;
+        color: var.$cl-white;
+        font-size: 1.375rem;
+        font-weight: var.$fw-700;
+        text-transform: uppercase;
+
+        &:active {
+            background-color: var.$cl-secondary;
+        }
+    }
+}

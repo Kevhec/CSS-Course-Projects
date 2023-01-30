@@ -1,0 +1,32 @@
+@use 'base/variables' as var;
+
+.field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var.$sz-20;
+
+    &__label {
+        font-family: var.$raleway;
+        font-size: 1.375rem;
+        color: var.$cl-primary;
+    }
+
+    &__input {
+        border: 3px solid var.$cl-primary;
+        padding: var.$sz-10;
+        color: var.$cl-primary;
+
+        &::placeholder {
+            color: var.$cl-primary;
+        }
+
+        &--select {
+            background-color: var.$cl-lightBrown;
+        }
+
+        &:focus-within {
+            outline: unset;
+            border-color: var.$cl-secondary;
+        }
+    }
+}

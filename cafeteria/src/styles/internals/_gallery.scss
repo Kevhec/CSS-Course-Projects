@@ -1,0 +1,12 @@
+@use 'base/variables' as var;
+
+.gallery-page {
+    &__container {
+        background-color: var.$cl-white;
+        padding: var.$sz-50 var.$sz-20;
+        
+        @include var.tablet {
+           padding: var.$sz-100;
+        }
+    }
+}
