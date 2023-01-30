@@ -7,6 +7,8 @@ const {src, dest, watch, series, parallel} = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
+const sourceMaps = require('gulp-sourcemaps');
+const cssNano = require('cssnano');
 
 // images
 const imagemin = require('gulp-imagemin');
@@ -22,8 +24,10 @@ function compileCSS(done) {
       gutil.log(gutil.colors.blue(err.message));
       this.emit('end');
     }))
+    .pipe(sourceMaps.init())
     .pipe(sass(/* {outputStyle: 'compressed'} */))
-    .pipe(postcss([autoprefixer()]))
+    .pipe(postcss([autoprefixer(), cssNano()]))
+    .pipe(sourceMaps.write('.'))
     .pipe(dest('./build/css'));
   
   done();
