@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    
+    <title>Delivery App</title>
+    <link rel="stylesheet" href="/assets/index-2c65b18c.css">
+  </head>
+
+  <body>
+    <header class="header container">
+      <figure class="header__logo">
+        <img src="/assets/logo-c38e2005.svg" alt="Logo app comida" />
+      </figure>
+      <nav>
+        <ul class="main-nav">
+          <li>
+            <a href="#" class="main-nav__link">Iniciar Sesión</a>
+          </li>
+          <li>
+            <a href="#" class="main-nav__link">Crear Cuenta</a>
+          </li>
+          <li>
+            <a href="#" class="main-nav__link main-nav__link--register"
+              >Registrar Restaurant</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      <div class="form-container even_columns">
+        <div class="form-container__column form-container__column--form">
+          <h2 class="form-container__heading">
+            Encuentra y pide comida de tu restaurante favorito
+          </h2>
+          <form class="form-container__form">
+            <div class="form-container__field">
+              <label for="restaurant" class="form-container__label"> RESTAURANTE </label>
+              <input
+                type="text"
+                name="restaurant"
+                id="restaurant"
+                class="form-container__input"
+                placeholder="Frisby"
+              />
+            </div>
+            <div class="form-container__field">
+              <label for="meal" class="form-container__label"> PLATILLO </label>
+              <input
+                type="text"
+                name="meal"
+                id="meal"
+                class="form-container__input"
+                placeholder="Pollo, Hamburguesa, Ensalada"
+              />
+            </div>
+            <button type="submit" class="form-container__button">Buscar</button>
+          </form>
+        </div>
+        <figure class="form-container__column form-container__column--image">
+          <img
+            src="/assets/dibujo_repartidor-2358edfe.svg"
+            class="form-container__image"
+          />
+        </figure>
+      </div>
+    </main> <!-- Form -->
+    <section class="instructions">
+      <img src="/assets/wave-21c83c4c.svg" class="instructions__wave">
+      <div class="instructions__content">
+        <h2 class="instructions__heading">
+          ¿Cómo funciona?
+          <span class="instructions__heading--span">
+            tan fácil como 1, 2 y 3
+          </span>
+        </h2>
+        <div class="instructions__cards container">
+          <div class="card">
+            <figure class="card__image">
+              <img src="/assets/paso_1-d797074a.png" alt="">
+            </figure>
+          </div> <!-- card -->
+          <div class="card">
+            <figure class="card__image">
+              <img src="/assets/paso_2-4547b34a.png" alt="">
+            </figure>
+          </div> <!-- card -->
+          <div class="card">
+            <figure class="card__image">
+              <img src="/assets/paso_3-159ba1e2.png" alt="">
+            </figure>
+          </div> <!-- card -->
+        </div><!-- cards container -->
+      </div>
+    </section>
+    <section class="testimonials container">
+      <h2 class="testimonials__heading">Testimonials</h2>
+      <div class="testimonials__container">
+        <div class="testimonial">
+          <div class="testimonial__header">
+            <figure class="testimonial__image">
+              <img src="/assets/testimonial1-302fa7e1.jpg" alt="">
+            </figure>
+            <div class="testimonial__info">
+              <p class="testimonial__name">Juan Perez</p>
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALIAAAAdCAYAAAAOwDZTAAAACXBIWXMAAAsTAAALEwEAmpwYAAADHElEQVR4nO2bv08UQRiGn4W5QmOhOUQTNUQKQ46OOEZFEwuaayyMpSUQKiVU/gtURlsbCxsSY2GBrQUxJmtJLCwwBEkUDrUwXnELZ7EDwWN/zMzuWhzfm1x2md3vfZ+Qmd3Zub0AT0UhdwCU5p1PfbfbTT0WBIEwCZOTlFdqrDmz9QquSMJkp75j8ho+Ucgw8NX8eVFptlw9yh7VwnS8mQacU2NNAzXzmfb0KFvCZKe+ZHIePlHIALAGjJimdWBUafZcfMoc1cIkTD5X5OahUMx+08OnTAmTnfqWyacjz1m2/U8Jk536lsnpPhCFjABfEuq6wGWlWbf1Kuv2JEzCBO5X5JmEUEzbjKNXWRImO/U1k/XwiUJqwAZwLuWU78AlpenY+JUxqoVJmA5yo5AAGDKfOnDebIeAYeCs2b8ANHL8PgGbQAvYBrbM/g7wzWxbQGvwavp/Y/djIEzC5MSkgCfAoxxDWzUs4ACeAvMZx4UpljBZMg0ozTywAG7rdp7aAxZMZqqESZhcmQ4mNFHIPeAlcKKi0DbwQGleg908S5iEyZbpn5l5FHIdeEM8jylT28Bdpfmw32D7wCBMwmTDdOQRMwoZBd4CV0oK/Qw0lWbtcKPLk68wCVMe05F1ZHPCDWClhNAV4GZvqKuESZjymBK/EFGaH8AUsFQgdAmYUpqdAh7CJExWTJmr12aNeYN4zc9Fm8SL2an3IN9FdWESpiTlfUVd9wjF1NQ96mwkTHY6Vkx5HXnSI7SM2qp8han62qp8M2vzOvKtAsFFaqvyFabqa6vyzazN68i3CwQXqa3KV5iqr63KN7M2dWYehZwEfhH/jipJz8027XW7DnBaaf4kHfR5YBAmYUpjyroiX0sJXQUmlWZWaWaJ5y6rCefVjEeZEiZhSlRWR+6dk7SBx8CE0rzfbzT7E+ZYO8ejqIRJmBJl25GXgYbSLCa96Kw0HaVZJH7lbtkm2FPCJEyJSpzQRCGDwE/gN/BQaV65EEch94FnwCngjNLs9p7jOs8SJmHKYkq7Io8DL4Ax11AAUzNmPMZd64VJmFyZ/gLRqrN6f8EkTAAAAABJRU5ErkJggg==" alt="Client rate of our app, 5 stars" class="testimonial__rate">
+            </div>
+          </div>
+          <blockquote class="testimonial__text">
+            Una excelente app, puedo seleccionar de una gran cantidad de opciones y pagar en tarjeta o efectivo según me convenga.
+          </blockquote>
+        </div> <!-- Testimonial -->
+        <div class="testimonial">
+          <div class="testimonial__header">
+            <figure class="testimonial__image">
+              <img src="/assets/testimonial2-68233215.jpg" alt="">
+            </figure>
+            <div class="testimonial__info">
+              <p class="testimonial__name">Itzel Cruz</p>
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALIAAAAdCAYAAAAOwDZTAAAACXBIWXMAAAsTAAALEwEAmpwYAAADHElEQVR4nO2bv08UQRiGn4W5QmOhOUQTNUQKQ46OOEZFEwuaayyMpSUQKiVU/gtURlsbCxsSY2GBrQUxJmtJLCwwBEkUDrUwXnELZ7EDwWN/zMzuWhzfm1x2md3vfZ+Qmd3Zub0AT0UhdwCU5p1PfbfbTT0WBIEwCZOTlFdqrDmz9QquSMJkp75j8ho+Ucgw8NX8eVFptlw9yh7VwnS8mQacU2NNAzXzmfb0KFvCZKe+ZHIePlHIALAGjJimdWBUafZcfMoc1cIkTD5X5OahUMx+08OnTAmTnfqWyacjz1m2/U8Jk536lsnpPhCFjABfEuq6wGWlWbf1Kuv2JEzCBO5X5JmEUEzbjKNXWRImO/U1k/XwiUJqwAZwLuWU78AlpenY+JUxqoVJmA5yo5AAGDKfOnDebIeAYeCs2b8ANHL8PgGbQAvYBrbM/g7wzWxbQGvwavp/Y/djIEzC5MSkgCfAoxxDWzUs4ACeAvMZx4UpljBZMg0ozTywAG7rdp7aAxZMZqqESZhcmQ4mNFHIPeAlcKKi0DbwQGleg908S5iEyZbpn5l5FHIdeEM8jylT28Bdpfmw32D7wCBMwmTDdOQRMwoZBd4CV0oK/Qw0lWbtcKPLk68wCVMe05F1ZHPCDWClhNAV4GZvqKuESZjymBK/EFGaH8AUsFQgdAmYUpqdAh7CJExWTJmr12aNeYN4zc9Fm8SL2an3IN9FdWESpiTlfUVd9wjF1NQ96mwkTHY6Vkx5HXnSI7SM2qp8han62qp8M2vzOvKtAsFFaqvyFabqa6vyzazN68i3CwQXqa3KV5iqr63KN7M2dWYehZwEfhH/jipJz8027XW7DnBaaf4kHfR5YBAmYUpjyroiX0sJXQUmlWZWaWaJ5y6rCefVjEeZEiZhSlRWR+6dk7SBx8CE0rzfbzT7E+ZYO8ejqIRJmBJl25GXgYbSLCa96Kw0HaVZJH7lbtkm2FPCJEyJSpzQRCGDwE/gN/BQaV65EEch94FnwCngjNLs9p7jOs8SJmHKYkq7Io8DL4Ax11AAUzNmPMZd64VJmFyZ/gLRqrN6f8EkTAAAAABJRU5ErkJggg==" alt="Client rate of our app, 5 stars" class="testimonial__rate">
+            </div>
+          </div>
+          <blockquote class="testimonial__text">
+            Una excelente app, puedo seleccionar de una gran cantidad.
+          </blockquote>
+        </div> <!-- Testimonial -->
+        <div class="testimonial">
+          <div class="testimonial__header">
+            <figure class="testimonial__image">
+              <img src="/assets/testimonial4-a6c73434.jpg" alt="">
+            </figure>
+            <div class="testimonial__info">
+              <p class="testimonial__name">Rocio Rodriguez</p>
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALIAAAAdCAYAAAAOwDZTAAAACXBIWXMAAAsTAAALEwEAmpwYAAADHElEQVR4nO2bv08UQRiGn4W5QmOhOUQTNUQKQ46OOEZFEwuaayyMpSUQKiVU/gtURlsbCxsSY2GBrQUxJmtJLCwwBEkUDrUwXnELZ7EDwWN/zMzuWhzfm1x2md3vfZ+Qmd3Zub0AT0UhdwCU5p1PfbfbTT0WBIEwCZOTlFdqrDmz9QquSMJkp75j8ho+Ucgw8NX8eVFptlw9yh7VwnS8mQacU2NNAzXzmfb0KFvCZKe+ZHIePlHIALAGjJimdWBUafZcfMoc1cIkTD5X5OahUMx+08OnTAmTnfqWyacjz1m2/U8Jk536lsnpPhCFjABfEuq6wGWlWbf1Kuv2JEzCBO5X5JmEUEzbjKNXWRImO/U1k/XwiUJqwAZwLuWU78AlpenY+JUxqoVJmA5yo5AAGDKfOnDebIeAYeCs2b8ANHL8PgGbQAvYBrbM/g7wzWxbQGvwavp/Y/djIEzC5MSkgCfAoxxDWzUs4ACeAvMZx4UpljBZMg0ozTywAG7rdp7aAxZMZqqESZhcmQ4mNFHIPeAlcKKi0DbwQGleg908S5iEyZbpn5l5FHIdeEM8jylT28Bdpfmw32D7wCBMwmTDdOQRMwoZBd4CV0oK/Qw0lWbtcKPLk68wCVMe05F1ZHPCDWClhNAV4GZvqKuESZjymBK/EFGaH8AUsFQgdAmYUpqdAh7CJExWTJmr12aNeYN4zc9Fm8SL2an3IN9FdWESpiTlfUVd9wjF1NQ96mwkTHY6Vkx5HXnSI7SM2qp8han62qp8M2vzOvKtAsFFaqvyFabqa6vyzazN68i3CwQXqa3KV5iqr63KN7M2dWYehZwEfhH/jipJz8027XW7DnBaaf4kHfR5YBAmYUpjyroiX0sJXQUmlWZWaWaJ5y6rCefVjEeZEiZhSlRWR+6dk7SBx8CE0rzfbzT7E+ZYO8ejqIRJmBJl25GXgYbSLCa96Kw0HaVZJH7lbtkm2FPCJEyJSpzQRCGDwE/gN/BQaV65EEch94FnwCngjNLs9p7jOs8SJmHKYkq7Io8DL4Ax11AAUzNmPMZd64VJmFyZ/gLRqrN6f8EkTAAAAABJRU5ErkJggg==" alt="Client rate of our app, 5 stars" class="testimonial__rate">
+            </div>
+          </div>
+          <blockquote class="testimonial__text">
+            Una excelente app, puedo seleccionar de una gran cantidad de opciones y pagar en tarjeta o efectivo según me convenga. efectivo según me convenga.
+          </blockquote>
+        </div> <!-- Testimonial -->
+        <div class="testimonial">
+          <div class="testimonial__header">
+            <figure class="testimonial__image">
+              <img src="/assets/testimonial5-0371b783.jpg" alt="">
+            </figure>
+            <div class="testimonial__info">
+              <p class="testimonial__name">Cynthia V</p>
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALIAAAAdCAYAAAAOwDZTAAAACXBIWXMAAAsTAAALEwEAmpwYAAADHElEQVR4nO2bv08UQRiGn4W5QmOhOUQTNUQKQ46OOEZFEwuaayyMpSUQKiVU/gtURlsbCxsSY2GBrQUxJmtJLCwwBEkUDrUwXnELZ7EDwWN/zMzuWhzfm1x2md3vfZ+Qmd3Zub0AT0UhdwCU5p1PfbfbTT0WBIEwCZOTlFdqrDmz9QquSMJkp75j8ho+Ucgw8NX8eVFptlw9yh7VwnS8mQacU2NNAzXzmfb0KFvCZKe+ZHIePlHIALAGjJimdWBUafZcfMoc1cIkTD5X5OahUMx+08OnTAmTnfqWyacjz1m2/U8Jk536lsnpPhCFjABfEuq6wGWlWbf1Kuv2JEzCBO5X5JmEUEzbjKNXWRImO/U1k/XwiUJqwAZwLuWU78AlpenY+JUxqoVJmA5yo5AAGDKfOnDebIeAYeCs2b8ANHL8PgGbQAvYBrbM/g7wzWxbQGvwavp/Y/djIEzC5MSkgCfAoxxDWzUs4ACeAvMZx4UpljBZMg0ozTywAG7rdp7aAxZMZqqESZhcmQ4mNFHIPeAlcKKi0DbwQGleg908S5iEyZbpn5l5FHIdeEM8jylT28Bdpfmw32D7wCBMwmTDdOQRMwoZBd4CV0oK/Qw0lWbtcKPLk68wCVMe05F1ZHPCDWClhNAV4GZvqKuESZjymBK/EFGaH8AUsFQgdAmYUpqdAh7CJExWTJmr12aNeYN4zc9Fm8SL2an3IN9FdWESpiTlfUVd9wjF1NQ96mwkTHY6Vkx5HXnSI7SM2qp8han62qp8M2vzOvKtAsFFaqvyFabqa6vyzazN68i3CwQXqa3KV5iqr63KN7M2dWYehZwEfhH/jipJz8027XW7DnBaaf4kHfR5YBAmYUpjyroiX0sJXQUmlWZWaWaJ5y6rCefVjEeZEiZhSlRWR+6dk7SBx8CE0rzfbzT7E+ZYO8ejqIRJmBJl25GXgYbSLCa96Kw0HaVZJH7lbtkm2FPCJEyJSpzQRCGDwE/gN/BQaV65EEch94FnwCngjNLs9p7jOs8SJmHKYkq7Io8DL4Ax11AAUzNmPMZd64VJmFyZ/gLRqrN6f8EkTAAAAABJRU5ErkJggg==" alt="Client rate of our app, 5 stars" class="testimonial__rate">
+            </div>
+          </div>
+          <blockquote class="testimonial__text">
+            Una excelente app, puedo seleccionar de una gran cantidad de opciones y pagar en tarjeta o efectivo según me convenga.
+          </blockquote>
+        </div> <!-- Testimonial -->
+        <div class="testimonial">
+          <div class="testimonial__header">
+            <figure class="testimonial__image">
+              <img src="/assets/testimonial3-569c3f36.jpg" alt="">
+            </figure>
+            <div class="testimonial__info">
+              <p class="testimonial__name">Jose Hernandez</p>
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALIAAAAdCAYAAAAOwDZTAAAACXBIWXMAAAsTAAALEwEAmpwYAAADHElEQVR4nO2bv08UQRiGn4W5QmOhOUQTNUQKQ46OOEZFEwuaayyMpSUQKiVU/gtURlsbCxsSY2GBrQUxJmtJLCwwBEkUDrUwXnELZ7EDwWN/zMzuWhzfm1x2md3vfZ+Qmd3Zub0AT0UhdwCU5p1PfbfbTT0WBIEwCZOTlFdqrDmz9QquSMJkp75j8ho+Ucgw8NX8eVFptlw9yh7VwnS8mQacU2NNAzXzmfb0KFvCZKe+ZHIePlHIALAGjJimdWBUafZcfMoc1cIkTD5X5OahUMx+08OnTAmTnfqWyacjz1m2/U8Jk536lsnpPhCFjABfEuq6wGWlWbf1Kuv2JEzCBO5X5JmEUEzbjKNXWRImO/U1k/XwiUJqwAZwLuWU78AlpenY+JUxqoVJmA5yo5AAGDKfOnDebIeAYeCs2b8ANHL8PgGbQAvYBrbM/g7wzWxbQGvwavp/Y/djIEzC5MSkgCfAoxxDWzUs4ACeAvMZx4UpljBZMg0ozTywAG7rdp7aAxZMZqqESZhcmQ4mNFHIPeAlcKKi0DbwQGleg908S5iEyZbpn5l5FHIdeEM8jylT28Bdpfmw32D7wCBMwmTDdOQRMwoZBd4CV0oK/Qw0lWbtcKPLk68wCVMe05F1ZHPCDWClhNAV4GZvqKuESZjymBK/EFGaH8AUsFQgdAmYUpqdAh7CJExWTJmr12aNeYN4zc9Fm8SL2an3IN9FdWESpiTlfUVd9wjF1NQ96mwkTHY6Vkx5HXnSI7SM2qp8han62qp8M2vzOvKtAsFFaqvyFabqa6vyzazN68i3CwQXqa3KV5iqr63KN7M2dWYehZwEfhH/jipJz8027XW7DnBaaf4kHfR5YBAmYUpjyroiX0sJXQUmlWZWaWaJ5y6rCefVjEeZEiZhSlRWR+6dk7SBx8CE0rzfbzT7E+ZYO8ejqIRJmBJl25GXgYbSLCa96Kw0HaVZJH7lbtkm2FPCJEyJSpzQRCGDwE/gN/BQaV65EEch94FnwCngjNLs9p7jOs8SJmHKYkq7Io8DL4Ax11AAUzNmPMZd64VJmFyZ/gLRqrN6f8EkTAAAAABJRU5ErkJggg==" alt="Client rate of our app, 5 stars" class="testimonial__rate">
+            </div>
+          </div>
+          <blockquote class="testimonial__text">
+            Una excelente app, puedo seleccionar de una gran cantidad de opciones y pagar en tarjeta o efectivo según me convenga.
+          </blockquote>
+        </div> <!-- Testimonial -->
+      </div>
+    </section>
+    <section class="favourites">
+      <h2 class="favourites__heading">
+        Restaurantes Favoritos
+      </h2>
+      <div class="favourites__container container">
+        <div class="favourite">
+          <figure class="favourite__image">
+            <img src="/assets/logo_ensaladas-7ac8f676.png" alt="Logo del restaurante Ensaladas">
+          </figure>
+          <div class="favourite__content">
+            <div class="favourite__header">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALIAAAAdCAYAAAAOwDZTAAAACXBIWXMAAAsTAAALEwEAmpwYAAADHElEQVR4nO2bv08UQRiGn4W5QmOhOUQTNUQKQ46OOEZFEwuaayyMpSUQKiVU/gtURlsbCxsSY2GBrQUxJmtJLCwwBEkUDrUwXnELZ7EDwWN/zMzuWhzfm1x2md3vfZ+Qmd3Zub0AT0UhdwCU5p1PfbfbTT0WBIEwCZOTlFdqrDmz9QquSMJkp75j8ho+Ucgw8NX8eVFptlw9yh7VwnS8mQacU2NNAzXzmfb0KFvCZKe+ZHIePlHIALAGjJimdWBUafZcfMoc1cIkTD5X5OahUMx+08OnTAmTnfqWyacjz1m2/U8Jk536lsnpPhCFjABfEuq6wGWlWbf1Kuv2JEzCBO5X5JmEUEzbjKNXWRImO/U1k/XwiUJqwAZwLuWU78AlpenY+JUxqoVJmA5yo5AAGDKfOnDebIeAYeCs2b8ANHL8PgGbQAvYBrbM/g7wzWxbQGvwavp/Y/djIEzC5MSkgCfAoxxDWzUs4ACeAvMZx4UpljBZMg0ozTywAG7rdp7aAxZMZqqESZhcmQ4mNFHIPeAlcKKi0DbwQGleg908S5iEyZbpn5l5FHIdeEM8jylT28Bdpfmw32D7wCBMwmTDdOQRMwoZBd4CV0oK/Qw0lWbtcKPLk68wCVMe05F1ZHPCDWClhNAV4GZvqKuESZjymBK/EFGaH8AUsFQgdAmYUpqdAh7CJExWTJmr12aNeYN4zc9Fm8SL2an3IN9FdWESpiTlfUVd9wjF1NQ96mwkTHY6Vkx5HXnSI7SM2qp8han62qp8M2vzOvKtAsFFaqvyFabqa6vyzazN68i3CwQXqa3KV5iqr63KN7M2dWYehZwEfhH/jipJz8027XW7DnBaaf4kHfR5YBAmYUpjyroiX0sJXQUmlWZWaWaJ5y6rCefVjEeZEiZhSlRWR+6dk7SBx8CE0rzfbzT7E+ZYO8ejqIRJmBJl25GXgYbSLCa96Kw0HaVZJH7lbtkm2FPCJEyJSpzQRCGDwE/gN/BQaV65EEch94FnwCngjNLs9p7jOs8SJmHKYkq7Io8DL4Ax11AAUzNmPMZd64VJmFyZ/gLRqrN6f8EkTAAAAABJRU5ErkJggg==" alt="Client rate of our app, 5 stars" class="favourite__rate">
+              <h3 class="favourite__name">
+                Green Ensaladas
+              </h3>
+            </div>
+            <p class="favourite__text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo eos ullam mollitia et sit sequi est perspiciatis qui, ex, iure sed! Ducimus magnam eveniet fugit atque maxime architecto necessitatibus esse.
+            </p>
+          </div>
+        </div> <!-- Favourite -->
+        <div class="favourite">
+          <figure class="favourite__image">
+            <img src="/assets/logo_ensaladas-7ac8f676.png" alt="Logo del restaurante Ensaladas">
+          </figure>
+          <div class="favourite__content">
+            <div class="favourite__header">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALIAAAAdCAYAAAAOwDZTAAAACXBIWXMAAAsTAAALEwEAmpwYAAADHElEQVR4nO2bv08UQRiGn4W5QmOhOUQTNUQKQ46OOEZFEwuaayyMpSUQKiVU/gtURlsbCxsSY2GBrQUxJmtJLCwwBEkUDrUwXnELZ7EDwWN/zMzuWhzfm1x2md3vfZ+Qmd3Zub0AT0UhdwCU5p1PfbfbTT0WBIEwCZOTlFdqrDmz9QquSMJkp75j8ho+Ucgw8NX8eVFptlw9yh7VwnS8mQacU2NNAzXzmfb0KFvCZKe+ZHIePlHIALAGjJimdWBUafZcfMoc1cIkTD5X5OahUMx+08OnTAmTnfqWyacjz1m2/U8Jk536lsnpPhCFjABfEuq6wGWlWbf1Kuv2JEzCBO5X5JmEUEzbjKNXWRImO/U1k/XwiUJqwAZwLuWU78AlpenY+JUxqoVJmA5yo5AAGDKfOnDebIeAYeCs2b8ANHL8PgGbQAvYBrbM/g7wzWxbQGvwavp/Y/djIEzC5MSkgCfAoxxDWzUs4ACeAvMZx4UpljBZMg0ozTywAG7rdp7aAxZMZqqESZhcmQ4mNFHIPeAlcKKi0DbwQGleg908S5iEyZbpn5l5FHIdeEM8jylT28Bdpfmw32D7wCBMwmTDdOQRMwoZBd4CV0oK/Qw0lWbtcKPLk68wCVMe05F1ZHPCDWClhNAV4GZvqKuESZjymBK/EFGaH8AUsFQgdAmYUpqdAh7CJExWTJmr12aNeYN4zc9Fm8SL2an3IN9FdWESpiTlfUVd9wjF1NQ96mwkTHY6Vkx5HXnSI7SM2qp8han62qp8M2vzOvKtAsFFaqvyFabqa6vyzazN68i3CwQXqa3KV5iqr63KN7M2dWYehZwEfhH/jipJz8027XW7DnBaaf4kHfR5YBAmYUpjyroiX0sJXQUmlWZWaWaJ5y6rCefVjEeZEiZhSlRWR+6dk7SBx8CE0rzfbzT7E+ZYO8ejqIRJmBJl25GXgYbSLCa96Kw0HaVZJH7lbtkm2FPCJEyJSpzQRCGDwE/gN/BQaV65EEch94FnwCngjNLs9p7jOs8SJmHKYkq7Io8DL4Ax11AAUzNmPMZd64VJmFyZ/gLRqrN6f8EkTAAAAABJRU5ErkJggg==" alt="Client rate of our app, 5 stars" class="favourite__rate">
+              <h3 class="favourite__name">
+                Green Ensaladas
+              </h3>
+            </div>
+            <p class="favourite__text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo eos ullam mollitia et sit sequi est perspiciatis qui, ex, iure sed! Ducimus magnam eveniet fugit atque maxime architecto necessitatibus esse.
+            </p>
+          </div>
+        </div> <!-- Favourite -->
+        <div class="favourite">
+          <figure class="favourite__image">
+            <img src="/assets/logo_ensaladas-7ac8f676.png" alt="Logo del restaurante Ensaladas">
+          </figure>
+          <div class="favourite__content">
+            <div class="favourite__header">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALIAAAAdCAYAAAAOwDZTAAAACXBIWXMAAAsTAAALEwEAmpwYAAADHElEQVR4nO2bv08UQRiGn4W5QmOhOUQTNUQKQ46OOEZFEwuaayyMpSUQKiVU/gtURlsbCxsSY2GBrQUxJmtJLCwwBEkUDrUwXnELZ7EDwWN/zMzuWhzfm1x2md3vfZ+Qmd3Zub0AT0UhdwCU5p1PfbfbTT0WBIEwCZOTlFdqrDmz9QquSMJkp75j8ho+Ucgw8NX8eVFptlw9yh7VwnS8mQacU2NNAzXzmfb0KFvCZKe+ZHIePlHIALAGjJimdWBUafZcfMoc1cIkTD5X5OahUMx+08OnTAmTnfqWyacjz1m2/U8Jk536lsnpPhCFjABfEuq6wGWlWbf1Kuv2JEzCBO5X5JmEUEzbjKNXWRImO/U1k/XwiUJqwAZwLuWU78AlpenY+JUxqoVJmA5yo5AAGDKfOnDebIeAYeCs2b8ANHL8PgGbQAvYBrbM/g7wzWxbQGvwavp/Y/djIEzC5MSkgCfAoxxDWzUs4ACeAvMZx4UpljBZMg0ozTywAG7rdp7aAxZMZqqESZhcmQ4mNFHIPeAlcKKi0DbwQGleg908S5iEyZbpn5l5FHIdeEM8jylT28Bdpfmw32D7wCBMwmTDdOQRMwoZBd4CV0oK/Qw0lWbtcKPLk68wCVMe05F1ZHPCDWClhNAV4GZvqKuESZjymBK/EFGaH8AUsFQgdAmYUpqdAh7CJExWTJmr12aNeYN4zc9Fm8SL2an3IN9FdWESpiTlfUVd9wjF1NQ96mwkTHY6Vkx5HXnSI7SM2qp8han62qp8M2vzOvKtAsFFaqvyFabqa6vyzazN68i3CwQXqa3KV5iqr63KN7M2dWYehZwEfhH/jipJz8027XW7DnBaaf4kHfR5YBAmYUpjyroiX0sJXQUmlWZWaWaJ5y6rCefVjEeZEiZhSlRWR+6dk7SBx8CE0rzfbzT7E+ZYO8ejqIRJmBJl25GXgYbSLCa96Kw0HaVZJH7lbtkm2FPCJEyJSpzQRCGDwE/gN/BQaV65EEch94FnwCngjNLs9p7jOs8SJmHKYkq7Io8DL4Ax11AAUzNmPMZd64VJmFyZ/gLRqrN6f8EkTAAAAABJRU5ErkJggg==" alt="Client rate of our app, 5 stars" class="favourite__rate">
+              <h3 class="favourite__name">
+                Green Ensaladas
+              </h3>
+            </div>
+            <p class="favourite__text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo eos ullam mollitia et sit sequi est perspiciatis qui, ex, iure sed! Ducimus magnam eveniet fugit atque maxime architecto necessitatibus esse.
+            </p>
+          </div>
+        </div> <!-- Favourite -->
+        <div class="favourite">
+          <figure class="favourite__image">
+            <img src="/assets/logo_ensaladas-7ac8f676.png" alt="Logo del restaurante Ensaladas">
+          </figure>
+          <div class="favourite__content">
+            <div class="favourite__header">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALIAAAAdCAYAAAAOwDZTAAAACXBIWXMAAAsTAAALEwEAmpwYAAADHElEQVR4nO2bv08UQRiGn4W5QmOhOUQTNUQKQ46OOEZFEwuaayyMpSUQKiVU/gtURlsbCxsSY2GBrQUxJmtJLCwwBEkUDrUwXnELZ7EDwWN/zMzuWhzfm1x2md3vfZ+Qmd3Zub0AT0UhdwCU5p1PfbfbTT0WBIEwCZOTlFdqrDmz9QquSMJkp75j8ho+Ucgw8NX8eVFptlw9yh7VwnS8mQacU2NNAzXzmfb0KFvCZKe+ZHIePlHIALAGjJimdWBUafZcfMoc1cIkTD5X5OahUMx+08OnTAmTnfqWyacjz1m2/U8Jk536lsnpPhCFjABfEuq6wGWlWbf1Kuv2JEzCBO5X5JmEUEzbjKNXWRImO/U1k/XwiUJqwAZwLuWU78AlpenY+JUxqoVJmA5yo5AAGDKfOnDebIeAYeCs2b8ANHL8PgGbQAvYBrbM/g7wzWxbQGvwavp/Y/djIEzC5MSkgCfAoxxDWzUs4ACeAvMZx4UpljBZMg0ozTywAG7rdp7aAxZMZqqESZhcmQ4mNFHIPeAlcKKi0DbwQGleg908S5iEyZbpn5l5FHIdeEM8jylT28Bdpfmw32D7wCBMwmTDdOQRMwoZBd4CV0oK/Qw0lWbtcKPLk68wCVMe05F1ZHPCDWClhNAV4GZvqKuESZjymBK/EFGaH8AUsFQgdAmYUpqdAh7CJExWTJmr12aNeYN4zc9Fm8SL2an3IN9FdWESpiTlfUVd9wjF1NQ96mwkTHY6Vkx5HXnSI7SM2qp8han62qp8M2vzOvKtAsFFaqvyFabqa6vyzazN68i3CwQXqa3KV5iqr63KN7M2dWYehZwEfhH/jipJz8027XW7DnBaaf4kHfR5YBAmYUpjyroiX0sJXQUmlWZWaWaJ5y6rCefVjEeZEiZhSlRWR+6dk7SBx8CE0rzfbzT7E+ZYO8ejqIRJmBJl25GXgYbSLCa96Kw0HaVZJH7lbtkm2FPCJEyJSpzQRCGDwE/gN/BQaV65EEch94FnwCngjNLs9p7jOs8SJmHKYkq7Io8DL4Ax11AAUzNmPMZd64VJmFyZ/gLRqrN6f8EkTAAAAABJRU5ErkJggg==" alt="Client rate of our app, 5 stars" class="favourite__rate">
+              <h3 class="favourite__name">
+                Green Ensaladas
+              </h3>
+            </div>
+            <p class="favourite__text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo eos ullam mollitia et sit sequi est perspiciatis qui, ex, iure sed! Ducimus magnam eveniet fugit atque maxime architecto necessitatibus esse.
+            </p>
+          </div>
+        </div> <!-- Favourite -->
+        <div class="favourite">
+          <figure class="favourite__image">
+            <img src="/assets/logo_ensaladas-7ac8f676.png" alt="Logo del restaurante Ensaladas">
+          </figure>
+          <div class="favourite__content">
+            <div class="favourite__header">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALIAAAAdCAYAAAAOwDZTAAAACXBIWXMAAAsTAAALEwEAmpwYAAADHElEQVR4nO2bv08UQRiGn4W5QmOhOUQTNUQKQ46OOEZFEwuaayyMpSUQKiVU/gtURlsbCxsSY2GBrQUxJmtJLCwwBEkUDrUwXnELZ7EDwWN/zMzuWhzfm1x2md3vfZ+Qmd3Zub0AT0UhdwCU5p1PfbfbTT0WBIEwCZOTlFdqrDmz9QquSMJkp75j8ho+Ucgw8NX8eVFptlw9yh7VwnS8mQacU2NNAzXzmfb0KFvCZKe+ZHIePlHIALAGjJimdWBUafZcfMoc1cIkTD5X5OahUMx+08OnTAmTnfqWyacjz1m2/U8Jk536lsnpPhCFjABfEuq6wGWlWbf1Kuv2JEzCBO5X5JmEUEzbjKNXWRImO/U1k/XwiUJqwAZwLuWU78AlpenY+JUxqoVJmA5yo5AAGDKfOnDebIeAYeCs2b8ANHL8PgGbQAvYBrbM/g7wzWxbQGvwavp/Y/djIEzC5MSkgCfAoxxDWzUs4ACeAvMZx4UpljBZMg0ozTywAG7rdp7aAxZMZqqESZhcmQ4mNFHIPeAlcKKi0DbwQGleg908S5iEyZbpn5l5FHIdeEM8jylT28Bdpfmw32D7wCBMwmTDdOQRMwoZBd4CV0oK/Qw0lWbtcKPLk68wCVMe05F1ZHPCDWClhNAV4GZvqKuESZjymBK/EFGaH8AUsFQgdAmYUpqdAh7CJExWTJmr12aNeYN4zc9Fm8SL2an3IN9FdWESpiTlfUVd9wjF1NQ96mwkTHY6Vkx5HXnSI7SM2qp8han62qp8M2vzOvKtAsFFaqvyFabqa6vyzazN68i3CwQXqa3KV5iqr63KN7M2dWYehZwEfhH/jipJz8027XW7DnBaaf4kHfR5YBAmYUpjyroiX0sJXQUmlWZWaWaJ5y6rCefVjEeZEiZhSlRWR+6dk7SBx8CE0rzfbzT7E+ZYO8ejqIRJmBJl25GXgYbSLCa96Kw0HaVZJH7lbtkm2FPCJEyJSpzQRCGDwE/gN/BQaV65EEch94FnwCngjNLs9p7jOs8SJmHKYkq7Io8DL4Ax11AAUzNmPMZd64VJmFyZ/gLRqrN6f8EkTAAAAABJRU5ErkJggg==" alt="Client rate of our app, 5 stars" class="favourite__rate">
+              <h3 class="favourite__name">
+                Green Ensaladas
+              </h3>
+            </div>
+            <p class="favourite__text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo eos ullam mollitia et sit sequi est perspiciatis qui, ex, iure sed! Ducimus magnam eveniet fugit atque maxime architecto necessitatibus esse.
+            </p>
+          </div>
+        </div> <!-- Favourite -->
+        <div class="favourite">
+          <figure class="favourite__image">
+            <img src="/assets/logo_ensaladas-7ac8f676.png" alt="Logo del restaurante Ensaladas">
+          </figure>
+          <div class="favourite__content">
+            <div class="favourite__header">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALIAAAAdCAYAAAAOwDZTAAAACXBIWXMAAAsTAAALEwEAmpwYAAADHElEQVR4nO2bv08UQRiGn4W5QmOhOUQTNUQKQ46OOEZFEwuaayyMpSUQKiVU/gtURlsbCxsSY2GBrQUxJmtJLCwwBEkUDrUwXnELZ7EDwWN/zMzuWhzfm1x2md3vfZ+Qmd3Zub0AT0UhdwCU5p1PfbfbTT0WBIEwCZOTlFdqrDmz9QquSMJkp75j8ho+Ucgw8NX8eVFptlw9yh7VwnS8mQacU2NNAzXzmfb0KFvCZKe+ZHIePlHIALAGjJimdWBUafZcfMoc1cIkTD5X5OahUMx+08OnTAmTnfqWyacjz1m2/U8Jk536lsnpPhCFjABfEuq6wGWlWbf1Kuv2JEzCBO5X5JmEUEzbjKNXWRImO/U1k/XwiUJqwAZwLuWU78AlpenY+JUxqoVJmA5yo5AAGDKfOnDebIeAYeCs2b8ANHL8PgGbQAvYBrbM/g7wzWxbQGvwavp/Y/djIEzC5MSkgCfAoxxDWzUs4ACeAvMZx4UpljBZMg0ozTywAG7rdp7aAxZMZqqESZhcmQ4mNFHIPeAlcKKi0DbwQGleg908S5iEyZbpn5l5FHIdeEM8jylT28Bdpfmw32D7wCBMwmTDdOQRMwoZBd4CV0oK/Qw0lWbtcKPLk68wCVMe05F1ZHPCDWClhNAV4GZvqKuESZjymBK/EFGaH8AUsFQgdAmYUpqdAh7CJExWTJmr12aNeYN4zc9Fm8SL2an3IN9FdWESpiTlfUVd9wjF1NQ96mwkTHY6Vkx5HXnSI7SM2qp8han62qp8M2vzOvKtAsFFaqvyFabqa6vyzazN68i3CwQXqa3KV5iqr63KN7M2dWYehZwEfhH/jipJz8027XW7DnBaaf4kHfR5YBAmYUpjyroiX0sJXQUmlWZWaWaJ5y6rCefVjEeZEiZhSlRWR+6dk7SBx8CE0rzfbzT7E+ZYO8ejqIRJmBJl25GXgYbSLCa96Kw0HaVZJH7lbtkm2FPCJEyJSpzQRCGDwE/gN/BQaV65EEch94FnwCngjNLs9p7jOs8SJmHKYkq7Io8DL4Ax11AAUzNmPMZd64VJmFyZ/gLRqrN6f8EkTAAAAABJRU5ErkJggg==" alt="Client rate of our app, 5 stars" class="favourite__rate">
+              <h3 class="favourite__name">
+                Green Ensaladas
+              </h3>
+            </div>
+            <p class="favourite__text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo eos ullam mollitia et sit sequi est perspiciatis qui, ex, iure sed! Ducimus magnam eveniet fugit atque maxime architecto necessitatibus esse.
+            </p>
+          </div>
+        </div> <!-- Favourite -->
+        <div class="favourite">
+          <figure class="favourite__image">
+            <img src="/assets/logo_ensaladas-7ac8f676.png" alt="Logo del restaurante Ensaladas">
+          </figure>
+          <div class="favourite__content">
+            <div class="favourite__header">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALIAAAAdCAYAAAAOwDZTAAAACXBIWXMAAAsTAAALEwEAmpwYAAADHElEQVR4nO2bv08UQRiGn4W5QmOhOUQTNUQKQ46OOEZFEwuaayyMpSUQKiVU/gtURlsbCxsSY2GBrQUxJmtJLCwwBEkUDrUwXnELZ7EDwWN/zMzuWhzfm1x2md3vfZ+Qmd3Zub0AT0UhdwCU5p1PfbfbTT0WBIEwCZOTlFdqrDmz9QquSMJkp75j8ho+Ucgw8NX8eVFptlw9yh7VwnS8mQacU2NNAzXzmfb0KFvCZKe+ZHIePlHIALAGjJimdWBUafZcfMoc1cIkTD5X5OahUMx+08OnTAmTnfqWyacjz1m2/U8Jk536lsnpPhCFjABfEuq6wGWlWbf1Kuv2JEzCBO5X5JmEUEzbjKNXWRImO/U1k/XwiUJqwAZwLuWU78AlpenY+JUxqoVJmA5yo5AAGDKfOnDebIeAYeCs2b8ANHL8PgGbQAvYBrbM/g7wzWxbQGvwavp/Y/djIEzC5MSkgCfAoxxDWzUs4ACeAvMZx4UpljBZMg0ozTywAG7rdp7aAxZMZqqESZhcmQ4mNFHIPeAlcKKi0DbwQGleg908S5iEyZbpn5l5FHIdeEM8jylT28Bdpfmw32D7wCBMwmTDdOQRMwoZBd4CV0oK/Qw0lWbtcKPLk68wCVMe05F1ZHPCDWClhNAV4GZvqKuESZjymBK/EFGaH8AUsFQgdAmYUpqdAh7CJExWTJmr12aNeYN4zc9Fm8SL2an3IN9FdWESpiTlfUVd9wjF1NQ96mwkTHY6Vkx5HXnSI7SM2qp8han62qp8M2vzOvKtAsFFaqvyFabqa6vyzazN68i3CwQXqa3KV5iqr63KN7M2dWYehZwEfhH/jipJz8027XW7DnBaaf4kHfR5YBAmYUpjyroiX0sJXQUmlWZWaWaJ5y6rCefVjEeZEiZhSlRWR+6dk7SBx8CE0rzfbzT7E+ZYO8ejqIRJmBJl25GXgYbSLCa96Kw0HaVZJH7lbtkm2FPCJEyJSpzQRCGDwE/gN/BQaV65EEch94FnwCngjNLs9p7jOs8SJmHKYkq7Io8DL4Ax11AAUzNmPMZd64VJmFyZ/gLRqrN6f8EkTAAAAABJRU5ErkJggg==" alt="Client rate of our app, 5 stars" class="favourite__rate">
+              <h3 class="favourite__name">
+                Green Ensaladas
+              </h3>
+            </div>
+            <p class="favourite__text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo eos ullam mollitia et sit sequi est perspiciatis qui, ex, iure sed! Ducimus magnam eveniet fugit atque maxime architecto necessitatibus esse.
+            </p>
+          </div>
+        </div> <!-- Favourite -->
+        <div class="favourite">
+          <figure class="favourite__image">
+            <img src="/assets/logo_ensaladas-7ac8f676.png" alt="Logo del restaurante Ensaladas">
+          </figure>
+          <div class="favourite__content">
+            <div class="favourite__header">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALIAAAAdCAYAAAAOwDZTAAAACXBIWXMAAAsTAAALEwEAmpwYAAADHElEQVR4nO2bv08UQRiGn4W5QmOhOUQTNUQKQ46OOEZFEwuaayyMpSUQKiVU/gtURlsbCxsSY2GBrQUxJmtJLCwwBEkUDrUwXnELZ7EDwWN/zMzuWhzfm1x2md3vfZ+Qmd3Zub0AT0UhdwCU5p1PfbfbTT0WBIEwCZOTlFdqrDmz9QquSMJkp75j8ho+Ucgw8NX8eVFptlw9yh7VwnS8mQacU2NNAzXzmfb0KFvCZKe+ZHIePlHIALAGjJimdWBUafZcfMoc1cIkTD5X5OahUMx+08OnTAmTnfqWyacjz1m2/U8Jk536lsnpPhCFjABfEuq6wGWlWbf1Kuv2JEzCBO5X5JmEUEzbjKNXWRImO/U1k/XwiUJqwAZwLuWU78AlpenY+JUxqoVJmA5yo5AAGDKfOnDebIeAYeCs2b8ANHL8PgGbQAvYBrbM/g7wzWxbQGvwavp/Y/djIEzC5MSkgCfAoxxDWzUs4ACeAvMZx4UpljBZMg0ozTywAG7rdp7aAxZMZqqESZhcmQ4mNFHIPeAlcKKi0DbwQGleg908S5iEyZbpn5l5FHIdeEM8jylT28Bdpfmw32D7wCBMwmTDdOQRMwoZBd4CV0oK/Qw0lWbtcKPLk68wCVMe05F1ZHPCDWClhNAV4GZvqKuESZjymBK/EFGaH8AUsFQgdAmYUpqdAh7CJExWTJmr12aNeYN4zc9Fm8SL2an3IN9FdWESpiTlfUVd9wjF1NQ96mwkTHY6Vkx5HXnSI7SM2qp8han62qp8M2vzOvKtAsFFaqvyFabqa6vyzazN68i3CwQXqa3KV5iqr63KN7M2dWYehZwEfhH/jipJz8027XW7DnBaaf4kHfR5YBAmYUpjyroiX0sJXQUmlWZWaWaJ5y6rCefVjEeZEiZhSlRWR+6dk7SBx8CE0rzfbzT7E+ZYO8ejqIRJmBJl25GXgYbSLCa96Kw0HaVZJH7lbtkm2FPCJEyJSpzQRCGDwE/gN/BQaV65EEch94FnwCngjNLs9p7jOs8SJmHKYkq7Io8DL4Ax11AAUzNmPMZd64VJmFyZ/gLRqrN6f8EkTAAAAABJRU5ErkJggg==" alt="Client rate of our app, 5 stars" class="favourite__rate">
+              <h3 class="favourite__name">
+                Green Ensaladas
+              </h3>
+            </div>
+            <p class="favourite__text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo eos ullam mollitia et sit sequi est perspiciatis qui, ex, iure sed! Ducimus magnam eveniet fugit atque maxime architecto necessitatibus esse.
+            </p>
+          </div>
+        </div> <!-- Favourite -->
+        <div class="favourite">
+          <figure class="favourite__image">
+            <img src="/assets/logo_ensaladas-7ac8f676.png" alt="Logo del restaurante Ensaladas">
+          </figure>
+          <div class="favourite__content">
+            <div class="favourite__header">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALIAAAAdCAYAAAAOwDZTAAAACXBIWXMAAAsTAAALEwEAmpwYAAADHElEQVR4nO2bv08UQRiGn4W5QmOhOUQTNUQKQ46OOEZFEwuaayyMpSUQKiVU/gtURlsbCxsSY2GBrQUxJmtJLCwwBEkUDrUwXnELZ7EDwWN/zMzuWhzfm1x2md3vfZ+Qmd3Zub0AT0UhdwCU5p1PfbfbTT0WBIEwCZOTlFdqrDmz9QquSMJkp75j8ho+Ucgw8NX8eVFptlw9yh7VwnS8mQacU2NNAzXzmfb0KFvCZKe+ZHIePlHIALAGjJimdWBUafZcfMoc1cIkTD5X5OahUMx+08OnTAmTnfqWyacjz1m2/U8Jk536lsnpPhCFjABfEuq6wGWlWbf1Kuv2JEzCBO5X5JmEUEzbjKNXWRImO/U1k/XwiUJqwAZwLuWU78AlpenY+JUxqoVJmA5yo5AAGDKfOnDebIeAYeCs2b8ANHL8PgGbQAvYBrbM/g7wzWxbQGvwavp/Y/djIEzC5MSkgCfAoxxDWzUs4ACeAvMZx4UpljBZMg0ozTywAG7rdp7aAxZMZqqESZhcmQ4mNFHIPeAlcKKi0DbwQGleg908S5iEyZbpn5l5FHIdeEM8jylT28Bdpfmw32D7wCBMwmTDdOQRMwoZBd4CV0oK/Qw0lWbtcKPLk68wCVMe05F1ZHPCDWClhNAV4GZvqKuESZjymBK/EFGaH8AUsFQgdAmYUpqdAh7CJExWTJmr12aNeYN4zc9Fm8SL2an3IN9FdWESpiTlfUVd9wjF1NQ96mwkTHY6Vkx5HXnSI7SM2qp8han62qp8M2vzOvKtAsFFaqvyFabqa6vyzazN68i3CwQXqa3KV5iqr63KN7M2dWYehZwEfhH/jipJz8027XW7DnBaaf4kHfR5YBAmYUpjyroiX0sJXQUmlWZWaWaJ5y6rCefVjEeZEiZhSlRWR+6dk7SBx8CE0rzfbzT7E+ZYO8ejqIRJmBJl25GXgYbSLCa96Kw0HaVZJH7lbtkm2FPCJEyJSpzQRCGDwE/gN/BQaV65EEch94FnwCngjNLs9p7jOs8SJmHKYkq7Io8DL4Ax11AAUzNmPMZd64VJmFyZ/gLRqrN6f8EkTAAAAABJRU5ErkJggg==" alt="Client rate of our app, 5 stars" class="favourite__rate">
+              <h3 class="favourite__name">
+                Green Ensaladas
+              </h3>
+            </div>
+            <p class="favourite__text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo eos ullam mollitia et sit sequi est perspiciatis qui, ex, iure sed! Ducimus magnam eveniet fugit atque maxime architecto necessitatibus esse.
+            </p>
+          </div>
+        </div> <!-- Favourite -->
+        <div class="favourite">
+          <figure class="favourite__image">
+            <img src="/assets/logo_ensaladas-7ac8f676.png" alt="Logo del restaurante Ensaladas">
+          </figure>
+          <div class="favourite__content">
+            <div class="favourite__header">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALIAAAAdCAYAAAAOwDZTAAAACXBIWXMAAAsTAAALEwEAmpwYAAADHElEQVR4nO2bv08UQRiGn4W5QmOhOUQTNUQKQ46OOEZFEwuaayyMpSUQKiVU/gtURlsbCxsSY2GBrQUxJmtJLCwwBEkUDrUwXnELZ7EDwWN/zMzuWhzfm1x2md3vfZ+Qmd3Zub0AT0UhdwCU5p1PfbfbTT0WBIEwCZOTlFdqrDmz9QquSMJkp75j8ho+Ucgw8NX8eVFptlw9yh7VwnS8mQacU2NNAzXzmfb0KFvCZKe+ZHIePlHIALAGjJimdWBUafZcfMoc1cIkTD5X5OahUMx+08OnTAmTnfqWyacjz1m2/U8Jk536lsnpPhCFjABfEuq6wGWlWbf1Kuv2JEzCBO5X5JmEUEzbjKNXWRImO/U1k/XwiUJqwAZwLuWU78AlpenY+JUxqoVJmA5yo5AAGDKfOnDebIeAYeCs2b8ANHL8PgGbQAvYBrbM/g7wzWxbQGvwavp/Y/djIEzC5MSkgCfAoxxDWzUs4ACeAvMZx4UpljBZMg0ozTywAG7rdp7aAxZMZqqESZhcmQ4mNFHIPeAlcKKi0DbwQGleg908S5iEyZbpn5l5FHIdeEM8jylT28Bdpfmw32D7wCBMwmTDdOQRMwoZBd4CV0oK/Qw0lWbtcKPLk68wCVMe05F1ZHPCDWClhNAV4GZvqKuESZjymBK/EFGaH8AUsFQgdAmYUpqdAh7CJExWTJmr12aNeYN4zc9Fm8SL2an3IN9FdWESpiTlfUVd9wjF1NQ96mwkTHY6Vkx5HXnSI7SM2qp8han62qp8M2vzOvKtAsFFaqvyFabqa6vyzazN68i3CwQXqa3KV5iqr63KN7M2dWYehZwEfhH/jipJz8027XW7DnBaaf4kHfR5YBAmYUpjyroiX0sJXQUmlWZWaWaJ5y6rCefVjEeZEiZhSlRWR+6dk7SBx8CE0rzfbzT7E+ZYO8ejqIRJmBJl25GXgYbSLCa96Kw0HaVZJH7lbtkm2FPCJEyJSpzQRCGDwE/gN/BQaV65EEch94FnwCngjNLs9p7jOs8SJmHKYkq7Io8DL4Ax11AAUzNmPMZd64VJmFyZ/gLRqrN6f8EkTAAAAABJRU5ErkJggg==" alt="Client rate of our app, 5 stars" class="favourite__rate">
+              <h3 class="favourite__name">
+                Green Ensaladas
+              </h3>
+            </div>
+            <p class="favourite__text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo eos ullam mollitia et sit sequi est perspiciatis qui, ex, iure sed! Ducimus magnam eveniet fugit atque maxime architecto necessitatibus esse.
+            </p>
+          </div>
+        </div> <!-- Favourite -->
+      </div>
+    </section>
+    <section class="jobs container">
+      <h2 class="jobs__heading">Gana dinero con AppComida</h2>
+      <div class="jobs__content">
+        <figure class="jobs__image">
+          <img src="/assets/repartidor-7dccde00.jpg" alt="Repartidor de AppComida">
+        </figure>
+        <div class="jobs__info">
+          <p class="jobs__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A quisquam quo provident, minus ipsum exercitationem commodi, laboriosam reiciendis illo quos quae. Esse architecto delectus quibusdam nesciunt earum molestias necessitatibus commodi.
+          </p>
+          <p class="jobs__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic iste quae dolorum saepe itaque totam, voluptates harum dignissimos temporibus, sit voluptatibus, placeat eveniet. Tempore animi, eum excepturi repudiandae nulla unde.
+          </p>
+          <button class="jobs__button">Más Información</button>
+        </div>
+      </div>
+    </section>
+    <section class="downloads">
+      <div class="downloads__container container">
+        <figure class="downloads__image">
+          <img src="/assets/app-ed7e544e.png" alt="Vista previa de AppComida">
+        </figure>
+        <div class="downloads__content">
+          <div class="downloads__info">
+            <h2 class="downloads__heading">Descarga la App</h2>
+            <p class="downloads__text">
+              Disponible para Android y iOS
+            </p>
+          </div>
+          <div class="downloads__links">
+            <a href="#" class="downloads__link">
+              <img src="/assets/tienda-apple-ef7e0317.svg" alt="Download on Apple Store">
+            </a>
+            <a href="#" class="downloads__link">
+              <img src="/assets/tienda-android-dd5dd347.svg" alt="Download on Google Play">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__content container">
+        <div class="footer__box">
+          <h2 class="footer__heading">Nosotros</h2>
+          <p class="footer__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, dignissimos eveniet hic ducimus ut id ipsam sed, consectetur numquam, repudiandae praesentium quaerat consequuntur culpa ipsa velit nisi aperiam quod? Odit!
+          </p>
+        </div>
+        <div class="footer__box">
+          <h2 class="footer__heading">Navegación</h2>
+          <nav class="footer__nav">
+            <a href="#" class="footer__nav-link">Enlace 1</a>
+            <a href="#" class="footer__nav-link">Enlace 2</a>
+            <a href="#" class="footer__nav-link">Enlace 3</a>
+            <a href="#" class="footer__nav-link">Enlace 4</a>
+            <a href="#" class="footer__nav-link">Enlace 5</a>
+            <a href="#" class="footer__nav-link">Enlace 6</a>
+          </nav>
+        </div>
+        <div class="footer__box">
+          <h2 class="footer__heading">Contacto</h2>
+          <p class="footer__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, dignissimos eveniet hic ducimus ut id ipsam sed, consectetur numquam, repudiandae praesentium quaerat consequuntur culpa ipsa velit nisi aperiam quod? Odit!
+          </p>
+        </div>
+      </div>
+      <div class="footer__copy">
+        <p>
+          App Comida. Todos los derechos Reservados
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
