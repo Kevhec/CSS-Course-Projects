@@ -1,0 +1,52 @@
+@use '../base/variables' as *;
+
+.form-container {
+  gap: rem(10);
+  margin-bottom: rem(50);
+  @include mdq($desktop) {
+     gap: rem(50);
+  }
+  
+  &__column {
+    &--form {
+      background-color: $primary;
+      padding: 50px;
+      color: $white;
+    }
+
+    &--image {
+      padding: rem(40);
+      margin: auto 0;
+      @include mdq($desktop) {
+         padding: 0;
+      }
+    }
+  }
+
+  &__heading {
+    text-align: center;
+  }
+
+  &__field {
+    margin-bottom: rem(16);
+  }
+
+  &__label {
+    margin-bottom: rem(10);
+    display: block;
+    line-height: 1;
+  }
+
+  &__input {
+    padding: rem(15);
+    width: 100%;
+    border: unset;
+  }
+
+  &__button {
+    @include button($secondary, $white);
+    @include mdq($tablet) {
+       width: 100%;
+    }
+  }
+}

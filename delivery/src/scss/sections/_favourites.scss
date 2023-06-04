@@ -1,0 +1,19 @@
+@use '../base/variables' as *;
+
+.favourites {
+  padding: rem(50) 0;
+  background-color: $light-gray;
+
+  &__heading {
+    color: $secondary;
+    text-align: center;
+  }
+
+  &__container {
+    @include mdq($tablet) {
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       gap: rem(40);
+    }
+  }
+}

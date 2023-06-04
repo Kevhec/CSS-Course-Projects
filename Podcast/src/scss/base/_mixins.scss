@@ -1,0 +1,109 @@
+@use 'variables' as *; 
+
+/** Media Queries **/
+@mixin tel {
+    @media (min-width: $tel) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $tablet) {
+        @content;
+    }
+}
+  
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+
+
+@mixin button($color, $text) {
+    background-color: $color;
+    font-size: rem(20);
+    padding: rem(12) rem(40);
+    font-weight: 700;
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: $text;
+    text-decoration: none;
+    transition: background-color .3s ease;
+    border: none;
+
+    &:hover {
+        background-color: darken($color, 10);
+    }
+
+    @include tablet {
+        width: auto;
+        display: inline-block;
+        
+    }
+}
+
+@mixin grid($columns, $gap ) {
+    display: grid;
+    gap: $gap;
+    grid-template-columns: repeat($columns, 1fr);
+}
+
+@mixin bgImage($url, $gradient) {
+    background-image: linear-gradient( $gradient 0%, $gradient 100% ), url( $url );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+@mixin iconBg($url) {
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-position: 50% rem(20);
+    background-size: rem(100);
+}
+
+@mixin headingBorder( $textColor, $lineColor ) {
+    font-size: rem(36);
+    display: inline-block;
+    margin-top: rem(50);
+    color: $textColor;
+    @include tablet { 
+        margin-top: 0;
+    }
+    
+    &::after {
+        content: '';
+        background-color: $lineColor;
+        height: rem(10);
+        width: calc( 100% + rem(10));
+        display: block;
+        margin: -rem(14) 0 0 0;
+    }
+}
+
+@mixin bgFormat ($url, $overlay:transparent, $bgposition:auto) {
+  background: linear-gradient($overlay, $overlay), url($url);
+  background-position: $bgposition;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin bgModernFormats($avif, $webp, $normal, $selector, $overlay:transparent, $bgposition:auto) {
+  :is(.avif.webp, .avif) {
+    .#{$selector} {
+      @include bgFormat($avif, $overlay, $bgposition);
+    }
+  };
+  :is(.notavif, .webp) {
+    .#{$selector} {
+      @include bgFormat($webp, $overlay, $bgposition);
+    }
+  };
+  :is(.notavif, .notwebp) {
+    .#{$selector} {
+      @include bgFormat($normal, $overlay, $bgposition);
+    }
+  }
+}

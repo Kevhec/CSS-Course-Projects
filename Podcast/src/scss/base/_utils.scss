@@ -1,0 +1,9 @@
+@use 'variables' as *; 
+
+.text-center {
+    text-align: center;
+}
+
+.bg-primario {
+    background-color: $cl_primary;
+}

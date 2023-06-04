@@ -1,0 +1,45 @@
+@use './variables' as *;
+
+body {
+  font-family: $roboto;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  margin: 0 0 rem(50) 0 ;
+}
+
+h1 {
+  font-size: rem(40);
+}
+h2 {
+  font-size: rem(36);
+}
+h3 {
+  font-size: rem(32);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  width: fit-content;
+}
+
+.container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.even_columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}

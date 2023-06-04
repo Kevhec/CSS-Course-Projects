@@ -1,0 +1,20 @@
+// Fuentes
+$main_ff: 'Poppins', sans-serif;
+
+// Tamaño de Media Queries
+$tel: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+
+// Colores
+$cl_primary: #84d9bc;
+$cl_secondary: #313c4e; 
+$cl_alphaSecondary: #394659b3;
+$cl_black: #000;
+$cl_white: #FFFFFF;
+
+// Rem conversor
+@function rem($px) {
+  $result: calc($px / 16) + rem;
+  @return $result;
+}

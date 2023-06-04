@@ -1,0 +1,29 @@
+@use '../base/variables' as *;
+
+.jobs {
+  padding: rem(50) 0;
+
+  &__content {
+    @include mdq($tablet) {
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       gap: rem(50);
+    }
+  }
+
+  &__heading {
+    color: $secondary;
+    text-align: center;
+  }
+
+  &__text {
+    margin-bottom: rem(20);
+    line-height: 1.5;
+    font-size: rem(20);
+    color: $secondary;
+  }
+  
+  &__button {
+    @include button($primary, $white);
+  }
+}

@@ -1,0 +1,27 @@
+@use '../base/variables' as *;
+
+.instructions {
+  &__content {
+    background-color: $primary;
+    outline: 1px solid $primary;
+    padding-bottom: rem(16);
+  }
+
+  &__heading {
+    color: $white;
+    text-align: center;
+    font-size: rem(36);
+    &--span {
+      display: block;
+      font-size: rem(18);
+    }
+  }
+
+  &__cards {
+    @include mdq($tablet) {
+       display: grid;
+       grid-template-columns: repeat(3, 1fr);
+       gap: rem(50);
+    }
+  }
+}

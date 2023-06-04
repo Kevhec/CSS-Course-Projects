@@ -1,0 +1,17 @@
+@use '../base/variables' as *;
+
+.testimonials {
+  padding: rem(50) 0;
+
+  &__container {
+    @include mdq($tablet) {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: rem(20);
+    }
+  }
+
+  &__heading {
+    text-align: center;  
+  }
+}

@@ -1,0 +1,42 @@
+@use '../base/mixins' as *;
+@use '../base/variables' as *;
+
+// Background with modern image formats
+@include bgModernFormats(
+  '/assets/processed_images/header.avif',
+  '/assets/processed_images/header.webp',
+  '/assets/original/header.jpg',
+  $selector: header,
+  $overlay: $cl_alphaSecondary,
+  $bgposition: top center
+);
+
+.header {
+  padding: rem(50) 0;
+  background-position: top right;
+
+  .logo {
+    max-width: rem(200);
+    margin-inline: auto;
+    @include tablet {
+      margin-inline: unset;
+      margin-right: auto;
+    }
+  }
+
+  .slogan {
+    margin: rem(100) 0;
+    @include tablet {
+      width: 50%;
+    }
+
+    h1 {
+      color: white;
+    }
+
+    button {
+      @include button ($cl_primary, $cl_secondary)
+    }
+  }
+}
+

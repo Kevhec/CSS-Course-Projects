@@ -1,0 +1,48 @@
+// Fonts
+$roboto: 'Roboto', sans-serif;
+
+// Media Queries
+$phone: 30rem;
+$tablet: 48rem;
+$desktop: 64rem;
+
+// Colors
+$primary: #e8505b;
+$secondary: #455a64;
+$black: #000;
+$white: #FFFFFF;
+$light-gray: #eceeef;
+
+@function rem($px) {
+  $result: calc($px / 16) + rem;
+  @return $result;
+}
+
+@mixin mdq($bp) {
+  @media (min-width: $bp) {
+      @content;
+  }
+}
+
+@mixin button($bg, $cl) {
+  background-color: $bg;
+  font-size: rem(20);
+  padding: rem(12) rem(30);
+  border-radius: 10px;
+  font-weight: 700;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: $cl;
+  text-decoration: none;
+  transition: background-color 300ms ease;
+  border: none;
+
+  &:hover {
+    background-color: darken($bg, 10);
+  }
+
+  @include mdq($tablet) {
+      width: fit-content;
+  }
+}
